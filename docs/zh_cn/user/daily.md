@@ -1,6 +1,6 @@
 # 每日自动化
 
-ZMXYOL_AUTO 把 [MAA-zmxy](https://github.com/luser-user/MAA-zmxy) 的流水线收成一套可直接跑的每日预设。
+ZMXYOL_AUTO 把日常任务收成一套可直接跑的预设。完整的「能做什么 / 怎么用 / 功能与文件对照」见仓库根目录 [README](../../../README.md)。
 
 ## 推荐用法
 
