@@ -28,7 +28,7 @@
     git submodule update --init --recursive
     ```
 
-2. 下载 OCR（文字识别）资源文件。推荐直接初始化子模块后执行：
+2. 准备 OCR（文字识别）模型。没有初始化 `assets/MaaCommonAssets` 子模块时，执行下面命令会自动下载中文 PPOCR 模型：
 
     ```bash
     python tools/configure.py
