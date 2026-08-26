@@ -1,0 +1,399 @@
+{
+    "$__mpe_config_新建Pipeline4": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1781850129594,
+            "isModifiedExternally": false,
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\Alliance\\魔窟探险.json",
+            "savedViewport": {
+                "x": -874,
+                "y": 134,
+                "zoom": 0.66
+            },
+            "filename": "新建Pipeline4",
+            "version": "v1.6.1"
+        }
+    },
+    "关闭魔窟探险": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1171,
+                    3,
+                    106,
+                    94
+                ],
+                "template": [
+                    "Alliance/联盟叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1217,
+                    29,
+                    30,
+                    29
+                ]
+            }
+        },
+        "next": [
+            "菜单检验",
+            "[JumpBack]关闭魔窟探险_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1937,
+                "y": 336
+            }
+        }
+    },
+    "关闭魔窟探险_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1171,
+                    3,
+                    106,
+                    94
+                ],
+                "template": [
+                    "Alliance/联盟叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1217,
+                    29,
+                    30,
+                    29
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2242,
+                "y": 426
+            }
+        }
+    },
+    "判断探险次数": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    778,
+                    653,
+                    203,
+                    43
+                ]
+            }
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "CheckExplorationCount"
+            }
+        },
+        "next": [
+            "联盟_单人探险"
+        ],
+        "on_error": [
+            "关闭魔窟探险"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 90
+            }
+        }
+    },
+    "联盟_单人探险": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    159,
+                    433,
+                    331,
+                    146
+                ],
+                "template": [
+                    "Alliance/单人探险.png"
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 10000,
+        "next": [
+            "联盟_魔窟_确定",
+            "[JumpBack]联盟_单人探险_校验"
+        ],
+        "on_error": [
+            "关闭魔窟探险"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1350,
+                "y": -174
+            }
+        }
+    },
+    "联盟_单人探险_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    159,
+                    433,
+                    331,
+                    146
+                ],
+                "template": [
+                    "Alliance/单人探险.png"
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1667,
+                "y": -427
+            }
+        }
+    },
+    "联盟_魔窟_确定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    418,
+                    343,
+                    460,
+                    125
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    702,
+                    398,
+                    56,
+                    24
+                ]
+            }
+        },
+        "next": [
+            "关闭魔窟探险",
+            "[JumpBack]联盟_魔窟_确定_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1677,
+                "y": -138
+            }
+        }
+    },
+    "联盟_魔窟_确定_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    418,
+                    343,
+                    460,
+                    125
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    702,
+                    398,
+                    56,
+                    24
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1960,
+                "y": -153
+            }
+        }
+    },
+    "联盟_魔窟探险": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    800,
+                    3,
+                    461,
+                    690
+                ],
+                "template": [
+                    "Alliance/魔窟探险.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1000,
+                    192,
+                    40,
+                    24
+                ]
+            }
+        },
+        "next": [
+            "联盟_魔窟队伍",
+            "[JumpBack]联盟_魔窟探险_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 31
+            }
+        }
+    },
+    "联盟_魔窟探险_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    802,
+                    0,
+                    461,
+                    704
+                ],
+                "template": [
+                    "Alliance/魔窟探险.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1003,
+                    186,
+                    43,
+                    35
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 645,
+                "y": 329
+            }
+        }
+    },
+    "联盟_魔窟队伍": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    6,
+                    569,
+                    157,
+                    149
+                ],
+                "template": [
+                    "Alliance/魔窟队伍.png"
+                ]
+            }
+        },
+        "next": [
+            "判断探险次数"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 62
+            }
+        }
+    },
+    "菜单检验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1130,
+                    2,
+                    147,
+                    147
+                ],
+                "template": [
+                    "public/菜单.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "魔窟探险结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 27
+            }
+        }
+    },
+    "魔窟探险任务入口": {
+        "next": [
+            "联盟_魔窟探险"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 120
+            }
+        }
+    },
+    "魔窟探险结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2599,
+                "y": 85
+            }
+        }
+    }
+}

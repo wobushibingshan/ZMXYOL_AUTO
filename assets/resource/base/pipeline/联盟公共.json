@@ -1,0 +1,480 @@
+{
+    "$__mpe_config_新建Pipeline3": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\联盟公共.json",
+            "lastSyncTime": 1781364006992,
+            "coordinateMode": "absolute-v1",
+            "isModifiedExternally": false,
+            "savedViewport": {
+                "x": 96,
+                "y": -168,
+                "zoom": 0.37
+            },
+            "filename": "新建Pipeline3",
+            "version": "v1.6.1"
+        }
+    },
+    "任务二": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    556,
+                    390,
+                    209,
+                    76
+                ],
+                "template": [
+                    "Alliance/公告_提交.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击物品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 899,
+                "y": 1474
+            }
+        }
+    },
+    "点击物品": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    450,
+                    174,
+                    44,
+                    40
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1206,
+                "y": 1260
+            }
+        }
+    },
+    "任务三": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    491,
+                    392,
+                    206,
+                    70
+                ],
+                "template": [
+                    "Alliance/公告_提交.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击物品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 884,
+                "y": 1912
+            }
+        }
+    },
+    "任务四": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    754,
+                    393,
+                    222,
+                    79
+                ],
+                "template": [
+                    "Alliance/公告_提交.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击物品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 859,
+                "y": 2170
+            }
+        }
+    },
+    "检查任务次数": {
+        "next": [
+            "[JumpBack]领取一",
+            "[JumpBack]领取二",
+            "[JumpBack]领取_滑动3-4任务",
+            "[JumpBack]领取三",
+            "[JumpBack]领取四",
+            "检查任务次数2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -224,
+                "y": 1663
+            }
+        }
+    },
+    "滑动3-4任务": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    805,
+                    262,
+                    35,
+                    33
+                ],
+                "end": [
+                    [
+                        277,
+                        252,
+                        41,
+                        40
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "点击物品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 905,
+                "y": 1721
+            }
+        }
+    },
+    "领取一": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "template": [
+                    "Alliance/公告_领取.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -238,
+                "y": 1062
+            }
+        }
+    },
+    "领取四": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "template": [
+                    "Alliance/公告_领取.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 188,
+                "y": 1388
+            }
+        }
+    },
+    "领取三": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "template": [
+                    "Alliance/公告_领取.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -418,
+                "y": 1367
+            }
+        }
+    },
+    "领取二": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "template": [
+                    "Alliance/公告_领取.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 11,
+                "y": 1067
+            }
+        }
+    },
+    "领取_滑动3-4任务": {
+        "max_hit": 1,
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    805,
+                    262,
+                    35,
+                    33
+                ],
+                "end": [
+                    [
+                        277,
+                        252,
+                        41,
+                        40
+                    ]
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 277,
+                "y": 1077
+            }
+        }
+    },
+    "检查任务次数2": {
+        "next": [
+            "任务一",
+            "任务二",
+            "滑动3-4任务",
+            "任务三",
+            "任务四"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 391,
+                "y": 1775
+            }
+        }
+    },
+    "公告任务页面": {
+        "next": [
+            "检查任务次数"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -541,
+                "y": 1668
+            }
+        }
+    },
+    "将数量拉满": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    373,
+                    284,
+                    604,
+                    283
+                ],
+                "template": [
+                    "Stage_Sweep/次数条-滑头.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "pre_wait_freezes": 200,
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin_offset": [
+                    17,
+                    14,
+                    -36,
+                    -34
+                ],
+                "end": [
+                    [
+                        1117,
+                        437,
+                        66,
+                        21
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "点击确定"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1824,
+                "y": 1237
+            }
+        }
+    },
+    "任务一": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    290,
+                    389,
+                    203,
+                    70
+                ],
+                "template": [
+                    "Alliance/公告_提交.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击物品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 899,
+                "y": 1226
+            }
+        }
+    },
+    "点击确定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    359,
+                    477,
+                    606,
+                    203
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2138,
+                "y": 1294
+            }
+        }
+    },
+    "点击选择": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    318,
+                    48,
+                    701,
+                    666
+                ],
+                "template": [
+                    "Alliance/公告_选择.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "将数量拉满"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1481,
+                "y": 1266
+            }
+        }
+    },
+    "点击领取": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "template": [
+                    "Alliance/公告_领取.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "检查任务次数2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2500,
+                "y": 1341
+            }
+        }
+    }
+}

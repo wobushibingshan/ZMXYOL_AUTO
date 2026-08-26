@@ -1,0 +1,131 @@
+{
+    "preset": [
+        {
+            "name": "一键日常",
+            "label": "一键日常",
+            "description": "启动游戏 → 完成全部日常 → 关闭游戏。适合定时长草。默认渠道为腾讯应用宝。",
+            "task": [
+                {
+                    "name": "启动游戏",
+                    "enabled": true,
+                    "option": {
+                        "游戏渠道": "腾讯应用宝"
+                    }
+                },
+                {
+                    "name": "冰霜遗迹",
+                    "enabled": true
+                },
+                {
+                    "name": "一键碾压",
+                    "enabled": true
+                },
+                {
+                    "name": "仙盟建设",
+                    "enabled": true
+                },
+                {
+                    "name": "关卡扫荡",
+                    "enabled": true,
+                    "option": {
+                        "关卡扫荡列表": [
+                            "五庄观",
+                            "龙门福地",
+                            "虚空之境",
+                            "八仙过海",
+                            "龙宫"
+                        ]
+                    }
+                },
+                {
+                    "name": "联盟",
+                    "enabled": true,
+                    "option": {
+                        "联盟列表": [
+                            "魔窟探险",
+                            "炼妖塔",
+                            "联盟任务"
+                        ]
+                    }
+                },
+                {
+                    "name": "法相挖宝",
+                    "enabled": true
+                },
+                {
+                    "name": "关闭游戏",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "name": "游戏内日常",
+            "label": "游戏内日常",
+            "description": "已在村庄界面时使用，不启停客户端，只跑日常任务。",
+            "task": [
+                {
+                    "name": "启动游戏",
+                    "enabled": false
+                },
+                {
+                    "name": "冰霜遗迹",
+                    "enabled": true
+                },
+                {
+                    "name": "一键碾压",
+                    "enabled": true
+                },
+                {
+                    "name": "仙盟建设",
+                    "enabled": true
+                },
+                {
+                    "name": "关卡扫荡",
+                    "enabled": true,
+                    "option": {
+                        "关卡扫荡列表": [
+                            "五庄观",
+                            "龙门福地",
+                            "虚空之境",
+                            "八仙过海",
+                            "龙宫"
+                        ]
+                    }
+                },
+                {
+                    "name": "联盟",
+                    "enabled": true,
+                    "option": {
+                        "联盟列表": [
+                            "魔窟探险",
+                            "炼妖塔",
+                            "联盟任务"
+                        ]
+                    }
+                },
+                {
+                    "name": "法相挖宝",
+                    "enabled": true
+                },
+                {
+                    "name": "关闭游戏",
+                    "enabled": false
+                }
+            ]
+        },
+        {
+            "name": "仅启动到村庄",
+            "label": "仅启动到村庄",
+            "description": "只负责启动游戏并关掉公告/活动弹窗，停在村庄世界地图。",
+            "task": [
+                {
+                    "name": "启动游戏",
+                    "enabled": true,
+                    "option": {
+                        "游戏渠道": "腾讯应用宝"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "task": [
+        {
+            "name": "启动游戏",
+            "label": "启动游戏",
+            "entry": "启动游戏",
+            "group": [
+                "lifecycle"
+            ],
+            "option": [
+                "游戏渠道"
+            ],
+            "default_check": true,
+            "description": "按所选渠道包名启动游戏，关闭公告/活动弹窗，直到识别到村庄世界地图。"
+        },
+        {
+            "name": "关闭游戏",
+            "label": "关闭游戏",
+            "entry": "关闭游戏",
+            "group": [
+                "lifecycle"
+            ],
+            "option": [
+                "游戏渠道"
+            ],
+            "default_check": true,
+            "description": "按所选渠道包名关闭游戏进程。"
+        }
+    ],
+    "option": {
+        "游戏渠道": {
+            "type": "select",
+            "label": "游戏渠道",
+            "description": "启动/关闭游戏使用的 Android 包名，必须与模拟器中安装的渠道包一致。",
+            "default_case": "腾讯应用宝",
+            "cases": [
+                {
+                    "name": "腾讯应用宝",
+                    "label": "腾讯应用宝",
+                    "pipeline_override": {
+                        "启动游戏": {
+                            "action": {
+                                "param": {
+                                    "package": "com.tencent.tmgp.zmxyol"
+                                }
+                            }
+                        },
+                        "关闭游戏": {
+                            "action": {
+                                "param": {
+                                    "package": "com.tencent.tmgp.zmxyol"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "小米",
+                    "label": "小米",
+                    "pipeline_override": {
+                        "启动游戏": {
+                            "action": {
+                                "param": {
+                                    "package": "com.zmxyol.union.mi"
+                                }
+                            }
+                        },
+                        "关闭游戏": {
+                            "action": {
+                                "param": {
+                                    "package": "com.zmxyol.union.mi"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "UC九游",
+                    "label": "UC九游",
+                    "pipeline_override": {
+                        "启动游戏": {
+                            "action": {
+                                "param": {
+                                    "package": "com.zmxyol.union.uc"
+                                }
+                            }
+                        },
+                        "关闭游戏": {
+                            "action": {
+                                "param": {
+                                    "package": "com.zmxyol.union.uc"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "自定义包名",
+                    "label": "自定义包名",
+                    "option": [
+                        "自定义包名"
+                    ]
+                }
+            ]
+        },
+        "自定义包名": {
+            "type": "input",
+            "label": "自定义包名",
+            "description": "仅在「游戏渠道」选择自定义包名时生效。填写模拟器中 `adb shell pm list packages` 看到的完整包名。",
+            "inputs": [
+                {
+                    "name": "package",
+                    "label": "Android 包名",
+                    "default": "com.tencent.tmgp.zmxyol",
+                    "verify": "^[A-Za-z][A-Za-z0-9_]*(\\.[A-Za-z][A-Za-z0-9_]*)+$",
+                    "pattern_msg": "请输入合法的 Android 包名，例如 com.tencent.tmgp.zmxyol"
+                }
+            ],
+            "pipeline_override": {
+                "启动游戏": {
+                    "action": {
+                        "param": {
+                            "package": "{package}"
+                        }
+                    }
+                },
+                "关闭游戏": {
+                    "action": {
+                        "param": {
+                            "package": "{package}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

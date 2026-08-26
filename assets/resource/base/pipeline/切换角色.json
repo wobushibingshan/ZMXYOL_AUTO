@@ -1,0 +1,600 @@
+{
+    "$__mpe_config_新建Pipeline6": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1781950867425,
+            "isModifiedExternally": false,
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\切换角色.json",
+            "savedViewport": {
+                "x": -133,
+                "y": -132,
+                "zoom": 0.49
+            },
+            "filename": "新建Pipeline6",
+            "version": "v1.6.1"
+        }
+    },
+    "关闭公告": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1208,
+                    0,
+                    72,
+                    66
+                ],
+                "template": [
+                    "公告叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 3000,
+        "next": [
+            "[JumpBack]关闭活动",
+            "检查挑战",
+            "检查竞技"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3194,
+                "y": 825
+            }
+        }
+    },
+    "关闭活动": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1065,
+                    11,
+                    95,
+                    90
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true,
+                "method": 5
+            }
+        },
+        "pre_wait_freezes": 500,
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3526,
+                "y": 1275
+            }
+        }
+    },
+    "切换角色_世界地图_检查1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1052,
+                    584,
+                    225,
+                    135
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "打开菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1452,
+                "y": 1321
+            }
+        }
+    },
+    "切换角色成功": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4269,
+                "y": 944
+            }
+        }
+    },
+    "定位最后一名角色": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    37,
+                    279,
+                    189,
+                    186
+                ],
+                "template": [
+                    "添加角色.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "pre_wait_freezes": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -29,
+                    -86,
+                    -25,
+                    -8
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 200,
+        "next": [
+            "进入游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2606,
+                "y": 829
+            }
+        }
+    },
+    "打开菜单": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1119,
+                    0,
+                    155,
+                    132
+                ],
+                "template": [
+                    "public/菜单.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.8
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1176,
+                    52,
+                    54,
+                    43
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "打开设置",
+            "切换角色_世界地图_检查1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1198,
+                "y": 843
+            }
+        }
+    },
+    "打开设置": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    975,
+                    6,
+                    233,
+                    160
+                ],
+                "template": [
+                    "public/设置.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1073,
+                    48,
+                    36,
+                    41
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "点击开始界面",
+            "[JumpBack]打开设置_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1497,
+                "y": 831
+            }
+        }
+    },
+    "检查挑战": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    239,
+                    0,
+                    563,
+                    138
+                ],
+                "template": [
+                    "挑战.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "切换角色成功"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3766,
+                "y": 642
+            }
+        }
+    },
+    "检查竞技": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    355,
+                    8,
+                    454,
+                    114
+                ],
+                "template": [
+                    "竞技.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "切换角色成功"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3746,
+                "y": 977
+            }
+        }
+    },
+    "点击开始界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    829,
+                    474,
+                    219,
+                    211
+                ],
+                "template": [
+                    "public/开始界面.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确定回到开始界面",
+            "[JumpBack]点击开始界面_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1787,
+                "y": 838
+            }
+        }
+    },
+    "确定回到开始界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    367,
+                    203,
+                    568,
+                    306
+                ],
+                "template": [
+                    "public/设置-确定.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "翻页角色",
+            "[JumpBack]确定回到开始界面_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2046,
+                "y": 840
+            }
+        }
+    },
+    "确认在村庄": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    997,
+                    584,
+                    281,
+                    135
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.8
+                ]
+            }
+        },
+        "post_wait_freezes": 3000,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "检查页面",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "当前处于村庄界面",
+                "display": "log"
+            }
+        },
+        "next": [
+            "打开菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 930,
+                "y": 801
+            }
+        }
+    },
+    "翻页角色": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    61,
+                    474,
+                    178,
+                    114
+                ],
+                "template": [
+                    "角色翻页.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    112,
+                    520,
+                    43,
+                    11
+                ]
+            }
+        },
+        "repeat": 3,
+        "repeat_delay": 200,
+        "post_wait_freezes": 500,
+        "next": [
+            "定位最后一名角色",
+            "[JumpBack]翻页角色_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2318,
+                "y": 828
+            }
+        }
+    },
+    "进入游戏": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    494,
+                    546,
+                    289,
+                    135
+                ],
+                "template": [
+                    "进入游戏.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭公告",
+            "[JumpBack]进入游戏_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2896,
+                "y": 837
+            }
+        }
+    },
+    "打开设置_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    987,
+                    2,
+                    211,
+                    140
+                ],
+                "template": [
+                    "public/设置.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1073,
+                    48,
+                    36,
+                    41
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1778,
+                "y": 1262
+            }
+        }
+    },
+    "点击开始界面_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    829,
+                    474,
+                    219,
+                    211
+                ],
+                "template": [
+                    "public/开始界面.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2042,
+                "y": 1212
+            }
+        }
+    },
+    "确定回到开始界面_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    367,
+                    203,
+                    568,
+                    306
+                ],
+                "template": [
+                    "public/设置-确定.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2338,
+                "y": 1270
+            }
+        }
+    },
+    "翻页角色_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    61,
+                    474,
+                    178,
+                    114
+                ],
+                "template": [
+                    "角色翻页.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    112,
+                    520,
+                    43,
+                    11
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2635,
+                "y": 1296
+            }
+        }
+    },
+    "进入游戏_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    494,
+                    546,
+                    289,
+                    135
+                ],
+                "template": [
+                    "进入游戏.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3211,
+                "y": 1218
+            }
+        }
+    }
+}

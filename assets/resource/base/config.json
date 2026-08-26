@@ -1,0 +1,31 @@
+{
+    "server": {
+        "port": 9066,
+        "host": "localhost"
+    },
+    "file": {
+        "root": ".",
+        "exclude": [
+            "node_modules",
+            ".git",
+            "dist",
+            "build"
+        ],
+        "extensions": [
+            ".json",
+            ".jsonc"
+        ],
+        "max_depth": 10,
+        "max_files": 10000
+    },
+    "log": {
+        "level": "DEBUG",
+        "dir": "./debug",
+        "push_to_client": true
+    },
+    "maafw": {
+        "enabled": true,
+        "lib_dir": "",
+        "resource_dir": "./resource"
+    }
+}

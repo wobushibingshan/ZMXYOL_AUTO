@@ -1,0 +1,382 @@
+{
+    "$__mpe_config_新建Pipeline2": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1781890352949,
+            "isModifiedExternally": false,
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\stages\\龙门福地.json",
+            "savedViewport": {
+                "x": -97,
+                "y": 86,
+                "zoom": 0.75
+            },
+            "filename": "新建Pipeline2",
+            "version": "v1.6.1"
+        }
+    },
+    "$__mpe_external_通用_开始挑战_新建Pipeline2": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1166,
+                "y": 189
+            }
+        }
+    },
+    "滑动置顶": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    546,
+                    282,
+                    116,
+                    29
+                ],
+                "end": [
+                    [
+                        543,
+                        606,
+                        128,
+                        35
+                    ]
+                ]
+            }
+        },
+        "post_wait_freezes": 300,
+        "next": [
+            "龙门福地_关卡-起点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -428,
+                "y": 523
+            }
+        }
+    },
+    "进入龙门福地": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    2,
+                    5,
+                    420,
+                    590
+                ],
+                "template": [
+                    "stages/龙门福地.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    240,
+                    187,
+                    35,
+                    35
+                ]
+            }
+        },
+        "next": [
+            "龙门福地_碾压",
+            "龙门福地_攻略",
+            "[JumpBack]进入龙门福地_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1141,
+                "y": 518
+            }
+        }
+    },
+    "进入龙门福地_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1,
+                    2,
+                    473,
+                    599
+                ],
+                "template": [
+                    "stages/龙门福地.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -782,
+                "y": 1045
+            }
+        }
+    },
+    "龙门福地_关卡-起点": {
+        "timeout": 5000,
+        "next": [
+            "龙门福地_魔蝎追击",
+            "龙门福地_逃脱追击"
+        ],
+        "on_error": [
+            "龙门福地_备用节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -95,
+                "y": 549
+            }
+        }
+    },
+    "龙门福地_关闭关卡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1176,
+                    6,
+                    102,
+                    88
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "龙门福地_检查是否返回到地图",
+            "[JumpBack]龙门福地_关闭关卡_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 681,
+                "y": 794
+            }
+        }
+    },
+    "龙门福地_关闭关卡_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1176,
+                    6,
+                    102,
+                    88
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1079,
+                "y": 1214
+            }
+        }
+    },
+    "龙门福地_备用节点": {
+        "max_hit": 2,
+        "next": [
+            "龙门福地_关闭关卡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 365,
+                "y": 741
+            }
+        }
+    },
+    "龙门福地_开始挑战": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    397,
+                    401,
+                    786,
+                    307
+                ],
+                "template": [
+                    "Stage_Sweep/开始挑战.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "[JumpBack]通用_开始挑战",
+            "滑动置顶"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 814,
+                "y": 154
+            }
+        }
+    },
+    "龙门福地_扫荡关卡开始": {
+        "next": [
+            "进入龙门福地"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1443,
+                "y": 546
+            }
+        }
+    },
+    "龙门福地_攻略": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    2,
+                    0,
+                    228,
+                    119
+                ],
+                "template": [
+                    "Stage_Sweep/攻略.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "滑动置顶"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -791,
+                "y": 664
+            }
+        }
+    },
+    "龙门福地_检查是否返回到地图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    990,
+                    577,
+                    285,
+                    136
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "timeout": 5000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1208,
+                "y": 804
+            }
+        }
+    },
+    "龙门福地_碾压": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    4,
+                    235,
+                    114
+                ],
+                "template": [
+                    "Stage_Sweep/碾压.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "滑动置顶"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -789,
+                "y": 295
+            }
+        }
+    },
+    "龙门福地_逃脱追击": {
+        "max_hit": 3,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    618,
+                    389,
+                    100,
+                    31
+                ],
+                "expected": [
+                    ".*[1-5].*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 500,
+        "next": [
+            "龙门福地_开始挑战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 360,
+                "y": 452
+            }
+        }
+    },
+    "龙门福地_魔蝎追击": {
+        "max_hit": 3,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    619,
+                    287,
+                    105,
+                    36
+                ],
+                "expected": [
+                    ".*[1-5].*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 500,
+        "next": [
+            "龙门福地_开始挑战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 349,
+                "y": 157
+            }
+        }
+    }
+}

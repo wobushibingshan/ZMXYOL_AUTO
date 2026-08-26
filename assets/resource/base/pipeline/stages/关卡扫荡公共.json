@@ -1,0 +1,386 @@
+{
+    "$__mpe_config_新建Pipeline7": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780860027725,
+            "isModifiedExternally": false,
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\stages\\关卡扫荡公共.json",
+            "savedViewport": {
+                "x": -493,
+                "y": 45,
+                "zoom": 0.43
+            },
+            "filename": "新建Pipeline7",
+            "version": "v1.6.1"
+        }
+    },
+    "五庄观_不使用祝福": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    323,
+                    550,
+                    292,
+                    130
+                ],
+                "template": [
+                    "不使用祝福.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    420,
+                    592,
+                    40,
+                    48
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2055,
+                "y": 65
+            }
+        }
+    },
+    "五庄观_关闭碾压完成": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1009,
+                    133,
+                    150,
+                    129
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]五庄观_关闭碾压完成_校验",
+            "五庄观_确认关闭碾压"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2065,
+                "y": 456
+            }
+        }
+    },
+    "五庄观_关闭碾压完成_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1009,
+                    133,
+                    150,
+                    129
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2558,
+                "y": 230
+            }
+        }
+    },
+    "五庄观_收起关卡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    397,
+                    401,
+                    786,
+                    307
+                ],
+                "template": [
+                    "Stage_Sweep/开始挑战.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    10,
+                    -308,
+                    -22,
+                    -40
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "$__mpe_code": {
+            "position": {
+                "x": 3127,
+                "y": 630
+            }
+        }
+    },
+    "五庄观_次数条": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    373,
+                    284,
+                    604,
+                    283
+                ],
+                "template": [
+                    "Stage_Sweep/次数条-滑头.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "pre_wait_freezes": 200,
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin_offset": [
+                    17,
+                    14,
+                    -36,
+                    -34
+                ],
+                "end": [
+                    [
+                        1117,
+                        437,
+                        66,
+                        21
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "五庄观_碾压确定"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1173,
+                "y": 373
+            }
+        }
+    },
+    "五庄观_确认关闭碾压": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "Stage_Sweep/文字-每日.png"
+                ]
+            }
+        },
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "[JumpBack]五庄观_收起关卡",
+            "公共流程结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2612,
+                "y": 735
+            }
+        }
+    },
+    "五庄观_碾压确定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    359,
+                    351,
+                    554,
+                    283
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]五庄观_碾压确定_校验",
+            "[JumpBack]五庄观_不使用祝福",
+            "五庄观_关闭碾压完成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1497,
+                "y": 134
+            }
+        }
+    },
+    "五庄观_碾压确定_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    359,
+                    351,
+                    554,
+                    283
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1878,
+                "y": -284
+            }
+        }
+    },
+    "公共流程结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3130,
+                "y": 1110
+            }
+        }
+    },
+    "次数条满的": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    299,
+                    331,
+                    699,
+                    278
+                ],
+                "template": [
+                    "Stage_Sweep/次数条-满.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "五庄观_碾压确定"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1174,
+                "y": 47
+            }
+        }
+    },
+    "通用_开始挑战": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    397,
+                    401,
+                    786,
+                    307
+                ],
+                "template": [
+                    "Stage_Sweep/开始挑战.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    38,
+                    17,
+                    -60,
+                    -48
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]通用_开始挑战_校验",
+            "次数条满的",
+            "五庄观_次数条"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 678,
+                "y": 28
+            }
+        }
+    },
+    "通用_开始挑战_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    397,
+                    401,
+                    786,
+                    307
+                ],
+                "template": [
+                    "Stage_Sweep/开始挑战.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    38,
+                    17,
+                    -60,
+                    -48
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1140,
+                "y": -322
+            }
+        }
+    }
+}

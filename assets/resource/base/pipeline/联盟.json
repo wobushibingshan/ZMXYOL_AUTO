@@ -1,0 +1,571 @@
+{
+    "$__mpe_config_新建Pipeline2": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1781864997518,
+            "isModifiedExternally": false,
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\联盟.json",
+            "savedViewport": {
+                "x": -2088,
+                "y": -106,
+                "zoom": 0.59
+            },
+            "filename": "新建Pipeline2",
+            "version": "v1.6.1"
+        }
+    },
+    "查找联盟": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    172,
+                    11,
+                    374,
+                    113
+                ],
+                "template": [
+                    "Alliance/查找联盟.png"
+                ]
+            }
+        },
+        "next": [
+            "联盟驻地"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1577,
+                "y": 228
+            }
+        }
+    },
+    "活动展开2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    6,
+                    4,
+                    127,
+                    124
+                ],
+                "template": [
+                    "stages/活动展开.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    46,
+                    46,
+                    52,
+                    45
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：活动展开.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到活动展开，准备点击",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 923,
+                "y": 803
+            }
+        }
+    },
+    "点击仙盟2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    16,
+                    113,
+                    115,
+                    131
+                ],
+                "template": [
+                    "Immortal_Alliance/仙盟.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    44,
+                    156,
+                    50,
+                    47
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：仙盟.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到仙盟，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "联盟详情",
+            "[JumpBack]点击仙盟2_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 917,
+                "y": 261
+            }
+        }
+    },
+    "点击仙盟2_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    16,
+                    113,
+                    115,
+                    131
+                ],
+                "template": [
+                    "Immortal_Alliance/仙盟.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    44,
+                    156,
+                    50,
+                    47
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1255,
+                "y": 622
+            }
+        }
+    },
+    "联盟_滑动": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    910,
+                    555,
+                    32,
+                    41
+                ],
+                "end": [
+                    [
+                        237,
+                        76,
+                        44,
+                        27
+                    ]
+                ]
+            }
+        },
+        "repeat": 5,
+        "repeat_delay": 200,
+        "post_wait_freezes": 500,
+        "next": [
+            "联盟_滑动2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2576,
+                "y": 308
+            }
+        }
+    },
+    "联盟_滑动2": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    126,
+                    531,
+                    35,
+                    44
+                ],
+                "end": [
+                    [
+                        841,
+                        182,
+                        51,
+                        46
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "魔窟探险任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2873,
+                "y": 403
+            }
+        }
+    },
+    "联盟任务": {
+        "next": [
+            "联盟返回村庄"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3747,
+                "y": 438
+            }
+        }
+    },
+    "联盟任务入口": {
+        "next": [
+            "联盟任务开始前的等待"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 206,
+                "y": 666
+            }
+        }
+    },
+    "联盟任务开始前的等待": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1063,
+                    531,
+                    214,
+                    186
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.8
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "仙盟建设任务前的等待：世界图.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到世界地图",
+                "display": "log"
+            }
+        },
+        "next": [
+            "点击仙盟2",
+            "[JumpBack]活动展开2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 559,
+                "y": 535
+            }
+        }
+    },
+    "联盟返回村庄": {
+        "next": [
+            "联盟_返回村庄"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4079,
+                "y": 447
+            }
+        }
+    },
+    "联盟详情": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    995,
+                    35,
+                    130,
+                    49
+                ],
+                "expected": [
+                    "联盟"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 500,
+        "next": [
+            "查找联盟",
+            "[JumpBack]联盟详情_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1230,
+                "y": 279
+            }
+        }
+    },
+    "联盟详情_校验": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    995,
+                    35,
+                    130,
+                    49
+                ],
+                "expected": [
+                    "联盟"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1613,
+                "y": 514
+            }
+        }
+    },
+    "联盟驻地": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    689,
+                    94,
+                    377,
+                    227
+                ],
+                "template": [
+                    "Immortal_Alliance/仙盟驻地.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    849,
+                    176,
+                    24,
+                    25
+                ]
+            }
+        },
+        "post_wait_freezes": 500,
+        "next": [
+            "菜单检验2",
+            "[JumpBack]联盟驻地_检验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1880,
+                "y": 155
+            }
+        }
+    },
+    "联盟驻地_检验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    689,
+                    94,
+                    377,
+                    227
+                ],
+                "template": [
+                    "Immortal_Alliance/仙盟驻地.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    849,
+                    176,
+                    24,
+                    25
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2181,
+                "y": 509
+            }
+        }
+    },
+    "菜单检验2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1130,
+                    2,
+                    147,
+                    147
+                ],
+                "template": [
+                    "public/菜单.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "联盟_滑动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2193,
+                "y": 201
+            }
+        }
+    },
+    "魔渊之界任务": {
+        "next": [
+            "联盟任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3423,
+                "y": 443
+            }
+        }
+    },
+    "魔窟探险任务": {
+        "next": [
+            "魔渊之界任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3148,
+                "y": 431
+            }
+        }
+    },
+    "联盟_返回村庄": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    983,
+                    585,
+                    292,
+                    133
+                ],
+                "template": [
+                    "Alliance/返回村庄.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 500,
+        "next": [
+            "联盟_检查世界地图",
+            "[JumpBack]联盟_返回村庄_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4408,
+                "y": 434
+            }
+        }
+    },
+    "联盟_检查世界地图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1032,
+                    592,
+                    244,
+                    125
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "联盟任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4776,
+                "y": 498
+            }
+        }
+    },
+    "联盟_返回村庄_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    983,
+                    585,
+                    292,
+                    133
+                ],
+                "template": [
+                    "Alliance/返回村庄.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": 4800,
+                "y": 808
+            }
+        }
+    },
+    "联盟任务结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5123,
+                "y": 676
+            }
+        }
+    }
+}

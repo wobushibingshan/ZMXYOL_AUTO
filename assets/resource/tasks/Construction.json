@@ -1,0 +1,14 @@
+{
+    "task": [
+        {
+            "name": "仙盟建设",
+            "label": "仙盟建设",
+            "entry": "仙盟建设任务开始前的等待",
+            "group": [
+                "daily"
+            ],
+            "default_check": true,
+            "description": "从村庄世界地图进入并完成仙盟建设。"
+        }
+    ]
+}
