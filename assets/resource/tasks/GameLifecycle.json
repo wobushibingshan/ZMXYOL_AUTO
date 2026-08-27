@@ -45,6 +45,13 @@
                                 }
                             }
                         },
+                        "启动游戏_二次拉起": {
+                            "action": {
+                                "param": {
+                                    "package": "com.tencent.tmgp.zmxyol"
+                                }
+                            }
+                        },
                         "关闭游戏": {
                             "action": {
                                 "param": {
@@ -65,6 +72,13 @@
                                 }
                             }
                         },
+                        "启动游戏_二次拉起": {
+                            "action": {
+                                "param": {
+                                    "package": "com.zmxyol.union.mi"
+                                }
+                            }
+                        },
                         "关闭游戏": {
                             "action": {
                                 "param": {
@@ -79,6 +93,13 @@
                     "label": "UC九游",
                     "pipeline_override": {
                         "启动游戏": {
+                            "action": {
+                                "param": {
+                                    "package": "com.zmxyol.union.uc"
+                                }
+                            }
+                        },
+                        "启动游戏_二次拉起": {
                             "action": {
                                 "param": {
                                     "package": "com.zmxyol.union.uc"
@@ -118,6 +139,13 @@
             ],
             "pipeline_override": {
                 "启动游戏": {
+                    "action": {
+                        "param": {
+                            "package": "{package}"
+                        }
+                    }
+                },
+                "启动游戏_二次拉起": {
                     "action": {
                         "param": {
                             "package": "{package}"

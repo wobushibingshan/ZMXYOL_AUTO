@@ -171,7 +171,7 @@ def validate() -> list[str]:
             errors.append(f"missing game channel case {case_name!r}")
             continue
         override = case.get("pipeline_override") or {}
-        for node_name in ("启动游戏", "关闭游戏"):
+        for node_name in ("启动游戏", "启动游戏_二次拉起", "关闭游戏"):
             actual = (
                 ((override.get(node_name) or {}).get("action") or {}).get("param") or {}
             ).get("package")

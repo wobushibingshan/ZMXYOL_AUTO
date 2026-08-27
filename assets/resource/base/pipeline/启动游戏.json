@@ -6,13 +6,25 @@
                 "package": "com.tencent.tmgp.zmxyol"
             }
         },
-        "post_delay": 5000,
+        "post_delay": 3000,
         "focus": {
             "Node.Action.Succeeded": {
                 "content": "已发送启动游戏指令，等待进入村庄",
                 "display": "toast"
             }
         },
+        "next": [
+            "启动游戏_二次拉起"
+        ]
+    },
+    "启动游戏_二次拉起": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.tencent.tmgp.zmxyol"
+            }
+        },
+        "post_delay": 5000,
         "next": [
             "启动游戏_处理界面"
         ]
@@ -21,8 +33,8 @@
         "recognition": {
             "type": "DirectHit"
         },
-        "timeout": 2000,
-        "rate_limit": 800,
+        "timeout": 180000,
+        "rate_limit": 1000,
         "next": [
             "启动游戏_加载页面",
             "启动游戏_开始界面",
@@ -31,7 +43,33 @@
             "启动游戏_关闭活动",
             "启动游戏_确认进入村庄",
             "[JumpBack]启动游戏_处理界面"
+        ],
+        "on_error": [
+            "启动游戏_未能进入村庄"
         ]
+    },
+    "启动游戏_未能进入村庄": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    16,
+                    16
+                ],
+                "expected": [
+                    "__START_GAME_FAILED__"
+                ]
+            }
+        },
+        "timeout": 200,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "未能进入游戏。请确认模拟器已安装该渠道包，并在「游戏渠道」中选择一致的项（UC 包请直接选 UC九游，不要用自定义）。",
+                "display": "toast"
+            }
+        }
     },
     "启动游戏_加载页面": {
         "recognition": {
