@@ -1,0 +1,14 @@
+{
+    "task": [
+        {
+            "name": "一键碾压",
+            "label": "一键碾压",
+            "entry": "一键碾压任务开始前的等待",
+            "group": [
+                "daily"
+            ],
+            "default_check": true,
+            "description": "从村庄世界地图进入并执行一键碾压。"
+        }
+    ]
+}

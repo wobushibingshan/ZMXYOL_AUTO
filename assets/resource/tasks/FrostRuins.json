@@ -1,0 +1,14 @@
+{
+    "task": [
+        {
+            "name": "冰霜遗迹",
+            "label": "冰霜遗迹",
+            "entry": "冰霜遗迹任务开始前的等待",
+            "group": [
+                "daily"
+            ],
+            "default_check": true,
+            "description": "从村庄世界地图进入并完成冰霜遗迹。"
+        }
+    ]
+}

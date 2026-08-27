@@ -1,0 +1,71 @@
+{
+    "$__mpe_config_新建Pipeline6": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\stages\\test2.json",
+            "lastSyncTime": 1780816429695,
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -187,
+                "y": 62,
+                "zoom": 0.7
+            },
+            "filename": "新建Pipeline6",
+            "version": "v1.6.1"
+        }
+    },
+    "新建节点1_副本12": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "造梦西游OL"
+                ]
+            }
+        },
+        "next": [
+            "新建节点1_副本13"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 760,
+                "y": 443
+            }
+        }
+    },
+    "新建节点1_副本13": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "造梦西游OL"
+                ]
+            }
+        },
+        "next": [
+            "新建节点1_副本14"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1059,
+                "y": 441
+            }
+        }
+    },
+    "新建节点1_副本14": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "造梦西游OL"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1376,
+                "y": 434
+            }
+        }
+    }
+}

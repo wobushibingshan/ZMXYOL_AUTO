@@ -1,0 +1,511 @@
+{
+    "$__mpe_config_新建Pipeline3": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1781343396274,
+            "isModifiedExternally": false,
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\stages\\五庄观.json",
+            "savedViewport": {
+                "x": 1235,
+                "y": -52,
+                "zoom": 0.72
+            },
+            "filename": "新建Pipeline3",
+            "version": "v1.6.1"
+        }
+    },
+    "$__mpe_external_通用_开始挑战_新建Pipeline3": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1326,
+                "y": 184
+            }
+        }
+    },
+    "五庄观_五庄观厢房": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "lower": [
+                            [
+                                207,
+                                130,
+                                73
+                            ]
+                        ],
+                        "recognition": "ColorMatch",
+                        "roi": [
+                            619,
+                            491,
+                            103,
+                            33
+                        ],
+                        "upper": [
+                            [
+                                207,
+                                130,
+                                73
+                            ]
+                        ]
+                    },
+                    {
+                        "expected": [
+                            ".*[1-5].*"
+                        ],
+                        "recognition": "OCR",
+                        "roi": [
+                            619,
+                            491,
+                            103,
+                            33
+                        ]
+                    }
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "五庄观_开始挑战_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 355,
+                "y": 578
+            }
+        }
+    },
+    "五庄观_五庄观后院": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "lower": [
+                            [
+                                207,
+                                130,
+                                73
+                            ]
+                        ],
+                        "recognition": "ColorMatch",
+                        "roi": [
+                            618,
+                            389,
+                            100,
+                            31
+                        ],
+                        "upper": [
+                            [
+                                207,
+                                130,
+                                73
+                            ]
+                        ]
+                    },
+                    {
+                        "expected": [
+                            ".*[1-5].*"
+                        ],
+                        "recognition": "OCR",
+                        "roi": [
+                            618,
+                            389,
+                            100,
+                            31
+                        ]
+                    }
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "五庄观_开始挑战_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 336,
+                "y": 308
+            }
+        }
+    },
+    "五庄观_五庄观外院": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "lower": [
+                            [
+                                207,
+                                130,
+                                73
+                            ]
+                        ],
+                        "recognition": "ColorMatch",
+                        "roi": [
+                            618,
+                            591,
+                            102,
+                            37
+                        ],
+                        "upper": [
+                            [
+                                207,
+                                130,
+                                73
+                            ]
+                        ]
+                    },
+                    {
+                        "expected": [
+                            ".*[1-5].*"
+                        ],
+                        "recognition": "OCR",
+                        "roi": [
+                            618,
+                            591,
+                            102,
+                            37
+                        ]
+                    }
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "五庄观_开始挑战_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 358,
+                "y": 875
+            }
+        }
+    },
+    "五庄观_五庄观大殿": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "lower": [
+                            [
+                                207,
+                                130,
+                                73
+                            ]
+                        ],
+                        "recognition": "ColorMatch",
+                        "roi": [
+                            619,
+                            287,
+                            105,
+                            36
+                        ],
+                        "upper": [
+                            [
+                                207,
+                                130,
+                                73
+                            ]
+                        ]
+                    },
+                    {
+                        "expected": [
+                            ".*[1-5].*"
+                        ],
+                        "recognition": "OCR",
+                        "roi": [
+                            619,
+                            287,
+                            105,
+                            36
+                        ]
+                    }
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "五庄观_开始挑战_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 347,
+                "y": 33
+            }
+        }
+    },
+    "五庄观_关卡-起点": {
+        "timeout": 5000,
+        "next": [
+            "五庄观_五庄观大殿",
+            "五庄观_五庄观后院",
+            "五庄观_五庄观厢房",
+            "五庄观_五庄观外院"
+        ],
+        "on_error": [
+            "五庄观_关闭关卡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -166,
+                "y": 514
+            }
+        }
+    },
+    "五庄观_关闭关卡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1176,
+                    6,
+                    102,
+                    88
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "五庄观_检查是否返回到地图",
+            "[JumpBack]五庄观_关闭关卡_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 364,
+                "y": 1229
+            }
+        }
+    },
+    "五庄观_关闭关卡_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1176,
+                    6,
+                    102,
+                    88
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 800,
+                "y": 1631
+            }
+        }
+    },
+    "五庄观_开始挑战_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    397,
+                    401,
+                    786,
+                    307
+                ],
+                "template": [
+                    "Stage_Sweep/开始挑战.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]通用_开始挑战",
+            "五庄观_关卡-起点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 824,
+                "y": 75
+            }
+        }
+    },
+    "五庄观_扫荡关卡开始": {
+        "next": [
+            "进入五庄观"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1362,
+                "y": 517
+            }
+        }
+    },
+    "五庄观_攻略": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    2,
+                    0,
+                    228,
+                    119
+                ],
+                "template": [
+                    "Stage_Sweep/攻略.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "timeout": 5000,
+        "next": [
+            "五庄观_关卡-起点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -563,
+                "y": 600
+            }
+        }
+    },
+    "五庄观_检查是否返回到地图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    990,
+                    577,
+                    285,
+                    136
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "timeout": 5000,
+        "$__mpe_code": {
+            "position": {
+                "x": 937,
+                "y": 1213
+            }
+        }
+    },
+    "五庄观_碾压": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    4,
+                    235,
+                    114
+                ],
+                "template": [
+                    "Stage_Sweep/碾压.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "timeout": 5000,
+        "next": [
+            "五庄观_关卡-起点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -551,
+                "y": 265
+            }
+        }
+    },
+    "进入五庄观": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    968,
+                    0,
+                    311,
+                    639
+                ],
+                "template": [
+                    "stages/五庄观_备用.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1157,
+                    186,
+                    44,
+                    46
+                ]
+            }
+        },
+        "next": [
+            "五庄观_碾压",
+            "五庄观_攻略",
+            "[JumpBack]进入五庄观_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1039,
+                "y": 449
+            }
+        }
+    },
+    "进入五庄观_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    968,
+                    0,
+                    311,
+                    639
+                ],
+                "template": [
+                    "stages/五庄观.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -566,
+                "y": 1022
+            }
+        }
+    }
+}

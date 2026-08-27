@@ -1,0 +1,909 @@
+{
+    "$__mpe_config_新建Pipeline7": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780574174254,
+            "isModifiedExternally": false,
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\仙盟建设.json",
+            "savedViewport": {
+                "x": 347,
+                "y": 84,
+                "zoom": 0.43
+            },
+            "filename": "新建Pipeline7",
+            "version": "v1.6.1"
+        }
+    },
+    "普通建设_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    506,
+                    77,
+                    620,
+                    594
+                ],
+                "template": [
+                    "Immortal_Alliance/普通建设.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    945,
+                    221,
+                    84,
+                    36
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1834,
+                "y": 309
+            }
+        }
+    },
+    "建设确定_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    637,
+                    340,
+                    200,
+                    146
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    676,
+                    383,
+                    103,
+                    52
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2152,
+                "y": 322
+            }
+        }
+    },
+    "关闭建设_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1171,
+                    6,
+                    109,
+                    79
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "pre_delay": 500,
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2530,
+                "y": 335
+            }
+        }
+    },
+    "设置齿轮_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1017,
+                    9,
+                    169,
+                    143
+                ],
+                "template": [
+                    "public/设置.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1069,
+                    47,
+                    48,
+                    43
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3247,
+                "y": 365
+            }
+        }
+    },
+    "设置村庄_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    952,
+                    506,
+                    133,
+                    162
+                ],
+                "template": [
+                    "public/设置-村庄.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    988,
+                    564,
+                    53,
+                    47
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3611,
+                "y": 253
+            }
+        }
+    },
+    "仙盟建设_加载页面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    261,
+                    5,
+                    755,
+                    547
+                ],
+                "template": [
+                    "public/加载页面.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "仙盟建设结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3597,
+                "y": -68
+            }
+        }
+    },
+    "仙盟建设_加载页面2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    261,
+                    5,
+                    755,
+                    547
+                ],
+                "template": [
+                    "public/加载页面.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "pre_wait_freezes": 5000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1819,
+                "y": 695
+            }
+        }
+    },
+    "仙盟仙域": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    719,
+                    338,
+                    141,
+                    160
+                ],
+                "template": [
+                    "Immortal_Alliance/仙盟仙域.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    700,
+                    345,
+                    45,
+                    57
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：仙盟仙域.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到仙盟仙域，准备点击",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1512,
+                "y": 663
+            }
+        }
+    },
+    "仙盟建设任务开始前的等待": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1063,
+                    531,
+                    214,
+                    186
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.8
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "仙盟建设任务前的等待：世界图.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到世界地图",
+                "display": "log"
+            }
+        },
+        "next": [
+            "点击仙盟",
+            "[JumpBack]活动展开"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 277,
+                "y": 114
+            }
+        }
+    },
+    "仙盟建设结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3916,
+                "y": 65
+            }
+        }
+    },
+    "仙盟村庄": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    418,
+                    295,
+                    202,
+                    238
+                ],
+                "template": [
+                    "Immortal_Alliance/仙盟村庄.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    606,
+                    347,
+                    33,
+                    48
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：仙盟村庄.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到仙盟村庄，准备点击",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1237,
+                "y": 298
+            }
+        }
+    },
+    "仙盟驻地": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    754,
+                    49,
+                    165,
+                    169
+                ],
+                "template": [
+                    "Immortal_Alliance/仙盟驻地.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    814,
+                    116,
+                    48,
+                    47
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：仙盟驻地.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到仙盟驻地，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "普通建设",
+            "[JumpBack]仙盟建设_加载页面2",
+            "[JumpBack]仙盟驻地_校验",
+            "[JumpBack]仙盟仙域",
+            "[JumpBack]仙盟村庄",
+            "[JumpBack]菜单偏移点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 946,
+                "y": -113
+            }
+        }
+    },
+    "仙盟驻地_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    754,
+                    49,
+                    165,
+                    169
+                ],
+                "template": [
+                    "Immortal_Alliance/仙盟驻地.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    814,
+                    116,
+                    48,
+                    47
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1238,
+                "y": 773
+            }
+        }
+    },
+    "关闭建设": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1171,
+                    6,
+                    109,
+                    79
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "pre_delay": 500,
+        "action": {
+            "type": "Click"
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：关闭建设.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到关闭建设，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "菜单",
+            "[JumpBack]关闭建设_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2143,
+                "y": -160
+            }
+        }
+    },
+    "建设确定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    637,
+                    340,
+                    200,
+                    146
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    676,
+                    383,
+                    103,
+                    52
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：建设确定.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到建设确定，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "关闭建设",
+            "[JumpBack]建设确定_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1799,
+                "y": -125
+            }
+        }
+    },
+    "仙盟建设": {
+        "post_delay": 2000,
+        "timeout": 3000,
+        "next": [
+            "仙盟建设任务开始前的等待"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -30,
+                "y": 191
+            }
+        }
+    },
+    "普通建设": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    506,
+                    77,
+                    620,
+                    594
+                ],
+                "template": [
+                    "Immortal_Alliance/普通建设.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    945,
+                    221,
+                    84,
+                    36
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：普通建设.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到普通建设，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "建设确定",
+            "[JumpBack]普通建设_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1337,
+                "y": -110
+            }
+        }
+    },
+    "活动展开": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    6,
+                    4,
+                    127,
+                    124
+                ],
+                "template": [
+                    "stages/活动展开.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    46,
+                    46,
+                    52,
+                    45
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：活动展开.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到活动展开，准备点击",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 634,
+                "y": 401
+            }
+        }
+    },
+    "点击仙盟": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    16,
+                    113,
+                    115,
+                    131
+                ],
+                "template": [
+                    "Immortal_Alliance/仙盟.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    44,
+                    156,
+                    50,
+                    47
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：仙盟.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到仙盟，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "仙盟驻地",
+            "[JumpBack]点击仙盟_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 632,
+                "y": -51
+            }
+        }
+    },
+    "点击仙盟_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    16,
+                    113,
+                    115,
+                    131
+                ],
+                "template": [
+                    "Immortal_Alliance/仙盟.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    44,
+                    156,
+                    50,
+                    47
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 936,
+                "y": 413
+            }
+        }
+    },
+    "菜单": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1117,
+                    4,
+                    162,
+                    145
+                ],
+                "template": [
+                    "public/菜单.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1165,
+                    37,
+                    69,
+                    59
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：菜单.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到菜单，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "设置齿轮"
+        ],
+        "on_error": [
+            "菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2508,
+                "y": -122
+            }
+        }
+    },
+    "菜单偏移点击": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1117,
+                    4,
+                    162,
+                    145
+                ],
+                "template": [
+                    "public/菜单.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -557,
+                    257,
+                    -24,
+                    -13
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1518,
+                "y": 299
+            }
+        }
+    },
+    "设置村庄": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    952,
+                    506,
+                    133,
+                    162
+                ],
+                "template": [
+                    "public/设置-村庄.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    988,
+                    564,
+                    53,
+                    47
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：设置-村庄.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到设置村庄，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "[JumpBack]设置村庄_校验",
+            "仙盟建设_加载页面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3244,
+                "y": -27
+            }
+        }
+    },
+    "设置齿轮": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1017,
+                    9,
+                    169,
+                    143
+                ],
+                "template": [
+                    "public/设置.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1069,
+                    47,
+                    48,
+                    43
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：设置.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到设置，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "设置村庄",
+            "设置齿轮_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2890,
+                "y": -64
+            }
+        }
+    }
+}

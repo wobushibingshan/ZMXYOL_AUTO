@@ -1,0 +1,1020 @@
+{
+    "$__mpe_config_新建Pipeline5": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1781861438609,
+            "isModifiedExternally": false,
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\Alliance\\炼妖塔.json",
+            "savedViewport": {
+                "x": 328,
+                "y": 53,
+                "zoom": 0.57
+            },
+            "filename": "新建Pipeline5",
+            "version": "v1.6.1"
+        }
+    },
+    "买功绩": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "功绩",
+                    "按钮1000"
+                ],
+                "box_index": 1
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "联盟_加",
+            "[JumpBack]买功绩_2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2232,
+                "y": 669
+            }
+        }
+    },
+    "买功绩_2": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "功绩",
+                    "按钮1000"
+                ],
+                "box_index": 1
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2556,
+                "y": 402
+            }
+        }
+    },
+    "功绩": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    437,
+                    117,
+                    653,
+                    517
+                ],
+                "template": [
+                    "Alliance/功绩.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2583,
+                "y": 65
+            }
+        }
+    },
+    "妖魄商店滑动1": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    661,
+                    430
+                ],
+                "end": [
+                    [
+                        661,
+                        330
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "买功绩",
+            "结束1",
+            "结束3",
+            "结束2",
+            "[JumpBack]妖魄商店滑动2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1922,
+                "y": 929
+            }
+        }
+    },
+    "妖魄商店滑动2": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    661,
+                    430
+                ],
+                "end": [
+                    [
+                        661,
+                        330
+                    ]
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2099,
+                "y": 1517
+            }
+        }
+    },
+    "妖魄商铺": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    6,
+                    111,
+                    147,
+                    389
+                ],
+                "template": [
+                    "Alliance/妖魄商铺.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    48,
+                    193,
+                    49,
+                    51
+                ]
+            }
+        },
+        "next": [
+            "联盟_妖铺商店",
+            "[JumpBack]妖魄商铺_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1552,
+                "y": 458
+            }
+        }
+    },
+    "妖魄商铺_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    6,
+                    111,
+                    147,
+                    389
+                ],
+                "template": [
+                    "Alliance/妖魄商铺.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    48,
+                    193,
+                    49,
+                    51
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1887,
+                "y": 386
+            }
+        }
+    },
+    "按钮1000": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": "功绩",
+                "roi_offset": [
+                    -46,
+                    -82,
+                    108,
+                    232
+                ],
+                "lower": [
+                    [
+                        243,
+                        158,
+                        138
+                    ]
+                ],
+                "upper": [
+                    [
+                        243,
+                        158,
+                        138
+                    ]
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2833,
+                "y": 77
+            }
+        }
+    },
+    "按钮1000备用方案": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": "功绩",
+                "roi_offset": [
+                    -46,
+                    -82,
+                    108,
+                    232
+                ],
+                "template": [
+                    "Alliance/功绩1000.png"
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2183,
+                "y": -151
+            }
+        }
+    },
+    "炼妖塔": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    340,
+                    8,
+                    395,
+                    704
+                ],
+                "template": [
+                    "Alliance/炼妖塔.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1123,
+                "y": 294
+            }
+        }
+    },
+    "炼妖塔收益溢出": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    396,
+                    389,
+                    523,
+                    168
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1081,
+                "y": -3
+            }
+        }
+    },
+    "炼妖塔退出_菜单检验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1117,
+                    3,
+                    162,
+                    140
+                ],
+                "template": [
+                    "public/菜单.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "[JumpBack]联盟_意外叉_副本1",
+            "联盟_炼妖塔结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4384,
+                "y": 1529
+            }
+        }
+    },
+    "结束1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    445,
+                    116,
+                    614,
+                    509
+                ],
+                "template": [
+                    "Alliance/六级灵玉.png"
+                ]
+            }
+        },
+        "next": [
+            "联盟_关闭炼妖塔商铺"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2452,
+                "y": 1048
+            }
+        }
+    },
+    "结束2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    427,
+                    113,
+                    263,
+                    504
+                ],
+                "template": [
+                    "Alliance/商铺问好.png"
+                ]
+            }
+        },
+        "next": [
+            "联盟_关闭炼妖塔商铺"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2438,
+                "y": 1612
+            }
+        }
+    },
+    "结束3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    445,
+                    116,
+                    614,
+                    509
+                ],
+                "template": [
+                    "Alliance/化身魂器装备碎片.png"
+                ]
+            }
+        },
+        "next": [
+            "联盟_关闭炼妖塔商铺"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2378,
+                "y": 1304
+            }
+        }
+    },
+    "联盟_关闭炼妖塔": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    9,
+                    6,
+                    127,
+                    94
+                ],
+                "template": [
+                    "Alliance/炼妖塔叉.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回联盟主页",
+            "[JumpBack]联盟_关闭炼妖塔_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3363,
+                "y": 1520
+            }
+        }
+    },
+    "联盟_关闭炼妖塔_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    9,
+                    6,
+                    127,
+                    94
+                ],
+                "template": [
+                    "Alliance/炼妖塔叉.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3771,
+                "y": 1851
+            }
+        }
+    },
+    "联盟_关闭炼妖塔商铺": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1038,
+                    25,
+                    135,
+                    106
+                ],
+                "template": [
+                    "Alliance/联盟叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1089,
+                    59,
+                    22,
+                    27
+                ]
+            }
+        },
+        "next": [
+            "联盟_关闭炼妖塔",
+            "[JumpBack]联盟_关闭炼妖塔商铺_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2856,
+                "y": 1362
+            }
+        }
+    },
+    "联盟_关闭炼妖塔商铺_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1038,
+                    25,
+                    135,
+                    106
+                ],
+                "template": [
+                    "Alliance/联盟叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1089,
+                    59,
+                    22,
+                    27
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3124,
+                "y": 1746
+            }
+        }
+    },
+    "联盟_加": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    696,
+                    336,
+                    268,
+                    201
+                ],
+                "template": [
+                    "Alliance/联盟加.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "pre_wait_freezes": 300,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    826,
+                    422,
+                    35,
+                    32
+                ]
+            }
+        },
+        "repeat": 5,
+        "repeat_delay": 100,
+        "next": [
+            "联盟_次数条_检验",
+            "[JumpBack]联盟_加_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2824,
+                "y": 514
+            }
+        }
+    },
+    "联盟_加_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    696,
+                    336,
+                    268,
+                    201
+                ],
+                "template": [
+                    "Alliance/联盟加.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "pre_wait_freezes": 300,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    826,
+                    422,
+                    35,
+                    32
+                ]
+            }
+        },
+        "repeat": 5,
+        "$__mpe_code": {
+            "position": {
+                "x": 3220,
+                "y": 242
+            }
+        }
+    },
+    "联盟_妖铺商店": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    432,
+                    6,
+                    447,
+                    151
+                ],
+                "template": [
+                    "Alliance/妖铺商店.png"
+                ]
+            }
+        },
+        "next": [
+            "妖魄商店滑动1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1808,
+                "y": 664
+            }
+        }
+    },
+    "联盟_意外叉": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    891,
+                    22,
+                    322,
+                    222
+                ],
+                "template": [
+                    "Alliance/联盟叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 4225,
+                "y": 2114
+            }
+        }
+    },
+    "联盟_意外叉_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    891,
+                    22,
+                    322,
+                    222
+                ],
+                "template": [
+                    "Alliance/联盟叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 4678,
+                "y": 1914
+            }
+        }
+    },
+    "联盟_次数条_检验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    337,
+                    338,
+                    623,
+                    173
+                ],
+                "template": [
+                    "Stage_Sweep/次数条-满.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "联盟_绿色确定"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3178,
+                "y": 755
+            }
+        }
+    },
+    "联盟_炼妖塔结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4807,
+                "y": 1629
+            }
+        }
+    },
+    "联盟_绿色确定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    448,
+                    492,
+                    396,
+                    157
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    700,
+                    560,
+                    49,
+                    25
+                ]
+            }
+        },
+        "post_wait_freezes": 500,
+        "next": [
+            "[JumpBack]联盟_绿色确定_校验",
+            "买功绩",
+            "妖魄商店滑动1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3187,
+                "y": 1076
+            }
+        }
+    },
+    "联盟_绿色确定_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    448,
+                    492,
+                    396,
+                    157
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    700,
+                    560,
+                    49,
+                    25
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3575,
+                "y": 1179
+            }
+        }
+    },
+    "联盟_魔渊之界": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1,
+                    297,
+                    700,
+                    381
+                ],
+                "template": [
+                    "Alliance/魔渊之界.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    142,
+                    455,
+                    165,
+                    63
+                ]
+            }
+        },
+        "next": [
+            "领取",
+            "[JumpBack]炼妖塔收益溢出",
+            "[JumpBack]炼妖塔",
+            "[JumpBack]联盟_魔渊之界_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 499,
+                "y": 326
+            }
+        }
+    },
+    "联盟_魔渊之界_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    9,
+                    293,
+                    487,
+                    409
+                ],
+                "template": [
+                    "Alliance/魔渊之界.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    142,
+                    455,
+                    165,
+                    63
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1130,
+                "y": 949
+            }
+        }
+    },
+    "返回联盟主页": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    6,
+                    6,
+                    121,
+                    105
+                ],
+                "template": [
+                    "Alliance/魔渊之界退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 500,
+        "next": [
+            "[JumpBack]返回联盟主页_校验",
+            "炼妖塔退出_菜单检验",
+            "[JumpBack]联盟_意外叉"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3891,
+                "y": 1566
+            }
+        }
+    },
+    "返回联盟主页_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    6,
+                    6,
+                    121,
+                    105
+                ],
+                "template": [
+                    "Alliance/魔渊之界退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 4190,
+                "y": 1812
+            }
+        }
+    },
+    "领取": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    6,
+                    111,
+                    147,
+                    389
+                ],
+                "template": [
+                    "Alliance/妖魄商铺.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    108,
+                    412,
+                    -41,
+                    -41
+                ]
+            }
+        },
+        "repeat": 5,
+        "repeat_delay": 500,
+        "next": [
+            "妖魄商铺"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1134,
+                "y": 573
+            }
+        }
+    },
+    "魔渊之界任务入口": {
+        "next": [
+            "联盟_魔渊之界",
+            "[JumpBack]联盟_滑动3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 198,
+                "y": 383
+            }
+        }
+    },
+    "联盟_滑动3": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    126,
+                    531,
+                    35,
+                    44
+                ],
+                "end": [
+                    [
+                        334,
+                        442,
+                        35,
+                        40
+                    ]
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 518,
+                "y": 651
+            }
+        }
+    }
+}

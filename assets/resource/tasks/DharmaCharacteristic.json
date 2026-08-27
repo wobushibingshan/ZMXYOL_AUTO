@@ -1,0 +1,14 @@
+{
+    "task": [
+        {
+            "name": "法相挖宝",
+            "label": "法相挖宝",
+            "entry": "法相挖宝任务入口",
+            "group": [
+                "daily"
+            ],
+            "default_check": true,
+            "description": "完成法相挖宝日常。"
+        }
+    ]
+}

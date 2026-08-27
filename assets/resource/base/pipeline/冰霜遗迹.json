@@ -1,0 +1,1426 @@
+{
+    "$__mpe_config_新建Pipeline6": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780677611662,
+            "isModifiedExternally": false,
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\冰霜遗迹.json",
+            "savedViewport": {
+                "x": -1399,
+                "y": 14,
+                "zoom": 0.48
+            },
+            "filename": "新建Pipeline6",
+            "version": "v1.6.1"
+        }
+    },
+    "打开世界地图_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1114,
+                    591,
+                    164,
+                    126
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1172,
+                    630,
+                    60,
+                    47
+                ]
+            }
+        },
+        "repeat": 3,
+        "$__mpe_code": {
+            "position": {
+                "x": 644,
+                "y": 719
+            }
+        }
+    },
+    "点击极北_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    782,
+                    185,
+                    416,
+                    439
+                ],
+                "template": [
+                    "public/极北小地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    943,
+                    309,
+                    112,
+                    83
+                ]
+            }
+        },
+        "repeat": 3,
+        "$__mpe_code": {
+            "position": {
+                "x": 955,
+                "y": 735
+            }
+        }
+    },
+    "检查体力前校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    865,
+                    534,
+                    240,
+                    117
+                ],
+                "template": [
+                    "Frost_Ruins/冰霜遗迹-进入.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "检查体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1955,
+                "y": -144
+            }
+        }
+    },
+    "点击冰霜遗迹_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1066,
+                    289,
+                    214,
+                    174
+                ],
+                "template": [
+                    "stages/冰霜遗迹.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1157,
+                    354,
+                    40,
+                    59
+                ]
+            }
+        },
+        "repeat": 3,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：冰霜遗迹.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到冰霜遗迹，准备点击",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1891,
+                "y": 285
+            }
+        }
+    },
+    "冰霜遗迹-进入_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    865,
+                    534,
+                    240,
+                    117
+                ],
+                "template": [
+                    "Frost_Ruins/冰霜遗迹-进入.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    916,
+                    580,
+                    25,
+                    32
+                ]
+            }
+        },
+        "repeat": 3,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：冰霜遗迹-进入.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到冰霜遗迹-进入，准备点击",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2596,
+                "y": 688
+            }
+        }
+    },
+    "立即扫荡_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "Frost_Ruins/立即扫荡.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -339,
+                    -171,
+                    -109,
+                    -40
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3210,
+                "y": 706
+            }
+        }
+    },
+    "一件扫荡_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1005,
+                    518,
+                    131,
+                    114
+                ],
+                "template": [
+                    "Frost_Ruins/一键扫荡.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "pre_wait_freezes": 200,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1045,
+                    544,
+                    48,
+                    48
+                ]
+            }
+        },
+        "repeat": 3,
+        "$__mpe_code": {
+            "position": {
+                "x": 2917,
+                "y": 662
+            }
+        }
+    },
+    "扫荡中路_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    297,
+                    251,
+                    698,
+                    124
+                ],
+                "template": [
+                    "Immortal_Alliance/扫荡中路.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    816,
+                    293,
+                    106,
+                    38
+                ]
+            }
+        },
+        "repeat": 3,
+        "post_wait_freezes": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 3574,
+                "y": 824
+            }
+        }
+    },
+    "扫荡确定完成_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    380,
+                    289,
+                    571,
+                    322
+                ],
+                "template": [
+                    "public/冰蓝色确定.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.8
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 3,
+        "repeat_delay": 500,
+        "post_wait_freezes": 3000,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：扫荡确定完成.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到扫荡确定完成，准备点击",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 4073,
+                "y": 724
+            }
+        }
+    },
+    "关闭冰窟_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1030,
+                    2,
+                    168,
+                    108
+                ],
+                "template": [
+                    "public/扫荡叉.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.8
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1107,
+                    38,
+                    28,
+                    33
+                ]
+            }
+        },
+        "repeat": 5,
+        "repeat_delay": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": 4443,
+                "y": 698
+            }
+        }
+    },
+    "打开世界地图_2_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1135,
+                    596,
+                    143,
+                    121
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1186,
+                    624,
+                    50,
+                    53
+                ]
+            }
+        },
+        "repeat": 3,
+        "$__mpe_code": {
+            "position": {
+                "x": 4836,
+                "y": 695
+            }
+        }
+    },
+    "点击地图村庄_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    9,
+                    586,
+                    162,
+                    129
+                ],
+                "template": [
+                    "stages/村庄小地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    60,
+                    621,
+                    53,
+                    41
+                ]
+            }
+        },
+        "repeat": 3,
+        "$__mpe_code": {
+            "position": {
+                "x": 5154,
+                "y": 695
+            }
+        }
+    },
+    "地图确定_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    639,
+                    358,
+                    188,
+                    117
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    683,
+                    392,
+                    95,
+                    45
+                ]
+            }
+        },
+        "repeat": 3,
+        "$__mpe_code": {
+            "position": {
+                "x": 5472,
+                "y": 619
+            }
+        }
+    },
+    "冰霜遗迹_加载页面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    261,
+                    5,
+                    755,
+                    547
+                ],
+                "template": [
+                    "public/加载页面.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "冰霜遗迹任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5635,
+                "y": 228
+            }
+        }
+    },
+    "冰霜遗迹任务结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 6070,
+                "y": 329
+            }
+        }
+    },
+    "一件扫荡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1005,
+                    518,
+                    131,
+                    114
+                ],
+                "template": [
+                    "Frost_Ruins/一键扫荡.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "pre_wait_freezes": 200,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1045,
+                    544,
+                    48,
+                    48
+                ]
+            }
+        },
+        "repeat": 3,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：一键扫荡.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到一键扫荡，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "经典扫荡",
+            "[JumpBack]一件扫荡_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2577,
+                "y": 140
+            }
+        }
+    },
+    "世界地图确定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    689,
+                    384,
+                    224,
+                    116
+                ],
+                "template": [
+                    "public/冰蓝色确定.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    742,
+                    421,
+                    124,
+                    40
+                ]
+            }
+        },
+        "repeat": 3,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：冰蓝色确定.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到冰蓝色确定，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "点击冰霜遗迹",
+            "[JumpBack]移动地图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 201
+            }
+        }
+    },
+    "关闭冰窟": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1030,
+                    2,
+                    168,
+                    108
+                ],
+                "template": [
+                    "public/扫荡叉.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.8
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1107,
+                    38,
+                    28,
+                    33
+                ]
+            }
+        },
+        "repeat": 5,
+        "repeat_delay": 500,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：关闭冰窟.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到关闭冰窟，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "打开世界地图_2",
+            "[JumpBack]关闭冰窟_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4167,
+                "y": 169
+            }
+        }
+    },
+    "冰霜遗迹-进入": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    865,
+                    534,
+                    240,
+                    117
+                ],
+                "template": [
+                    "Frost_Ruins/冰霜遗迹-进入.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    918,
+                    577,
+                    30,
+                    33
+                ]
+            }
+        },
+        "repeat": 3,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：冰霜遗迹-进入.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到冰霜遗迹-进入，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "一件扫荡",
+            "[JumpBack]冰霜遗迹-进入_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2229,
+                "y": 257
+            }
+        }
+    },
+    "冰霜遗迹任务开始前的等待": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1124,
+                    589,
+                    154,
+                    129
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "post_wait_freezes": 3000,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：世界地图.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到世界地图",
+                "display": "log"
+            }
+        },
+        "next": [
+            "打开世界地图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 177
+            }
+        }
+    },
+    "地图确定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    639,
+                    358,
+                    188,
+                    117
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    683,
+                    392,
+                    95,
+                    45
+                ]
+            }
+        },
+        "repeat": 3,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：地图确定.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到地图确定，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "[JumpBack]地图确定_校验",
+            "冰霜遗迹_加载页面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5218,
+                "y": 171
+            }
+        }
+    },
+    "打开世界地图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1114,
+                    591,
+                    164,
+                    126
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1172,
+                    630,
+                    60,
+                    47
+                ]
+            }
+        },
+        "repeat": 3,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：世界地图.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到世界地图，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "点击极北",
+            "[JumpBack]打开世界地图_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 197
+            }
+        }
+    },
+    "打开世界地图_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1135,
+                    596,
+                    143,
+                    121
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1186,
+                    624,
+                    50,
+                    53
+                ]
+            }
+        },
+        "repeat": 3,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：世界图.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到世界地图，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "点击地图村庄",
+            "[JumpBack]打开世界地图_2_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4506,
+                "y": 170
+            }
+        }
+    },
+    "扫荡中路": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    297,
+                    251,
+                    698,
+                    124
+                ],
+                "template": [
+                    "Immortal_Alliance/扫荡中路.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    816,
+                    293,
+                    106,
+                    38
+                ]
+            }
+        },
+        "repeat": 3,
+        "post_wait_freezes": 1000,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：扫荡中路.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到扫荡中路，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "扫荡确定完成",
+            "[JumpBack]扫荡中路_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3212,
+                "y": 197
+            }
+        }
+    },
+    "扫荡确定完成": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    380,
+                    289,
+                    571,
+                    322
+                ],
+                "template": [
+                    "public/冰蓝色确定.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.8
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 3,
+        "repeat_delay": 500,
+        "post_wait_freezes": 3000,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：扫荡确定完成.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到扫荡确定完成，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "关闭冰窟",
+            "[JumpBack]扫荡确定完成_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3648,
+                "y": 288
+            }
+        }
+    },
+    "检查体力": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    886,
+                    482,
+                    235,
+                    59
+                ]
+            }
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "CheckRemainingCount"
+            }
+        },
+        "next": [
+            "冰霜遗迹-进入"
+        ],
+        "on_error": [
+            "关闭冰窟"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2356,
+                "y": -148
+            }
+        }
+    },
+    "点击冰霜遗迹": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1066,
+                    289,
+                    214,
+                    174
+                ],
+                "template": [
+                    "stages/冰霜遗迹.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1157,
+                    354,
+                    40,
+                    59
+                ]
+            }
+        },
+        "repeat": 3,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：冰霜遗迹.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到冰霜遗迹，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "[JumpBack]点击冰霜遗迹_校验",
+            "检查体力前校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1477,
+                "y": 150
+            }
+        }
+    },
+    "点击地图村庄": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    9,
+                    586,
+                    162,
+                    129
+                ],
+                "template": [
+                    "stages/村庄小地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    60,
+                    621,
+                    53,
+                    41
+                ]
+            }
+        },
+        "repeat": 3,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：村庄小地图.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到村庄小地图，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "地图确定",
+            "[JumpBack]点击地图村庄_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4849,
+                "y": 177
+            }
+        }
+    },
+    "点击极北": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    782,
+                    185,
+                    416,
+                    439
+                ],
+                "template": [
+                    "public/极北小地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    943,
+                    309,
+                    112,
+                    83
+                ]
+            }
+        },
+        "repeat": 3,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：极北小地图.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到极北小地图，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "世界地图确定",
+            "[JumpBack]点击极北_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 197
+            }
+        }
+    },
+    "确认一键碾压": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    349,
+                    145,
+                    159
+                ],
+                "template": [
+                    "One-click_domination/一键碾压.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：世界地图.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到世界地图",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 493,
+                "y": -300
+            }
+        }
+    },
+    "确认世界地图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1131,
+                    572,
+                    147,
+                    147
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：世界地图.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到世界地图",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 781,
+                "y": -307
+            }
+        }
+    },
+    "移动地图": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    841,
+                    124,
+                    60,
+                    59
+                ],
+                "end": [
+                    [
+                        396,
+                        495,
+                        105,
+                        92
+                    ]
+                ]
+            }
+        },
+        "focus": {
+            "Node.Action.Starting": {
+                "content": "正在移动地图",
+                "display": "log"
+            },
+            "Node.Action.Succeeded": {
+                "content": "地图移动完成",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1400,
+                "y": 682
+            }
+        }
+    },
+    "移动地图_副本2": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    841,
+                    124,
+                    60,
+                    59
+                ],
+                "end": [
+                    [
+                        396,
+                        495,
+                        105,
+                        92
+                    ]
+                ]
+            }
+        },
+        "focus": {
+            "Node.Action.Starting": {
+                "content": "正在移动地图",
+                "display": "log"
+            },
+            "Node.Action.Succeeded": {
+                "content": "地图移动完成",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1011,
+                "y": -220
+            }
+        }
+    },
+    "经典扫荡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    207,
+                    318,
+                    78,
+                    145
+                ],
+                "template": [
+                    "Frost_Ruins/经典扫荡.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    235,
+                    349,
+                    22,
+                    84
+                ]
+            }
+        },
+        "repeat": 3,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：经典扫荡.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到经典扫荡，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "扫荡中路",
+            "[JumpBack]立即扫荡_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2892,
+                "y": 213
+            }
+        }
+    }
+}

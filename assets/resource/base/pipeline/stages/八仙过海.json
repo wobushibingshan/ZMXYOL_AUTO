@@ -1,0 +1,538 @@
+{
+    "$__mpe_config_新建Pipeline5": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780942891389,
+            "isModifiedExternally": false,
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\stages\\八仙过海.json",
+            "savedViewport": {
+                "x": -56,
+                "y": 106,
+                "zoom": 0.49
+            },
+            "filename": "新建Pipeline5",
+            "version": "v1.6.1"
+        }
+    },
+    "八仙过海_关闭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1176,
+                    6,
+                    102,
+                    88
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "八仙过海_检查是否返回到地图",
+            "[JumpBack]八仙过海_关闭_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1531,
+                "y": 833
+            }
+        }
+    },
+    "八仙过海_关闭_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1176,
+                    6,
+                    102,
+                    88
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1903,
+                "y": 1333
+            }
+        }
+    },
+    "八仙过海_备用": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    968,
+                    238,
+                    163,
+                    227
+                ],
+                "template": [
+                    "右边.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1029,
+                    320,
+                    22,
+                    38
+                ]
+            }
+        },
+        "post_wait_freezes": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": 571,
+                "y": 1208
+            }
+        }
+    },
+    "八仙过海_夜": {
+        "max_hit": 5,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    968,
+                    238,
+                    163,
+                    227
+                ],
+                "template": [
+                    "右边.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1030,
+                    319,
+                    19,
+                    35
+                ]
+            }
+        },
+        "post_wait_freezes": 500,
+        "next": [
+            "八仙过海_开始挑战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 989,
+                "y": 696
+            }
+        }
+    },
+    "八仙过海_开始挑战": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    692,
+                    495,
+                    446,
+                    168
+                ],
+                "template": [
+                    "Stage_Sweep/八仙-开始挑战.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    900,
+                    547,
+                    173,
+                    62
+                ]
+            }
+        },
+        "timeout": 1500,
+        "next": [
+            "八仙过海_次数条-滑头"
+        ],
+        "on_error": [
+            "八仙过海_夜",
+            "八仙过海_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1034,
+                "y": 261
+            }
+        }
+    },
+    "八仙过海_扫荡开始": {
+        "next": [
+            "进入八仙过海"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -423,
+                "y": 279
+            }
+        }
+    },
+    "八仙过海_昼": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    968,
+                    238,
+                    163,
+                    227
+                ],
+                "template": [
+                    "右边.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1029,
+                    320,
+                    22,
+                    38
+                ]
+            }
+        },
+        "post_wait_freezes": 500,
+        "$__mpe_code": {
+            "position": {
+                "x": 289,
+                "y": 1121
+            }
+        }
+    },
+    "八仙过海_检查是否返回到地图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    990,
+                    577,
+                    285,
+                    136
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "timeout": 5000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1895,
+                "y": 921
+            }
+        }
+    },
+    "八仙过海_次数": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    250,
+                    92,
+                    281,
+                    49
+                ],
+                "expected": [
+                    ".*[1-9].*"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -25,
+                "y": 1046
+            }
+        }
+    },
+    "八仙过海_次数条-滑头": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    373,
+                    284,
+                    604,
+                    283
+                ],
+                "template": [
+                    "Stage_Sweep/次数条-滑头.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "pre_wait_freezes": 500,
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin_offset": [
+                    16,
+                    13,
+                    -35,
+                    -30
+                ],
+                "end_offset": [
+                    [
+                        620,
+                        3,
+                        11,
+                        0
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "八仙过海_次数条确定"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1734,
+                "y": 106
+            }
+        }
+    },
+    "八仙过海_次数条确定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    359,
+                    351,
+                    554,
+                    283
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 500,
+        "timeout": 10000,
+        "next": [
+            "八仙过海_碾压关闭",
+            "[JumpBack]八仙过海_次数条确定路由"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2088,
+                "y": 118
+            }
+        }
+    },
+    "八仙过海_次数条确定路由": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    359,
+                    351,
+                    554,
+                    283
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2571,
+                "y": 339
+            }
+        }
+    },
+    "八仙过海_碾压关闭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    892,
+                    73,
+                    303,
+                    350
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]八仙过海_碾压关闭_校验",
+            "八仙过海_开始挑战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2485,
+                "y": -290
+            }
+        }
+    },
+    "八仙过海_碾压关闭_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    892,
+                    73,
+                    303,
+                    350
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2891,
+                "y": -144
+            }
+        }
+    },
+    "八仙过海_页面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    161,
+                    67,
+                    98,
+                    97
+                ],
+                "template": [
+                    "Stage_Sweep/规则.png"
+                ]
+            }
+        },
+        "timeout": 5000,
+        "next": [
+            "八仙过海_开始挑战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 477,
+                "y": 271
+            }
+        }
+    },
+    "进入八仙过海": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    667,
+                    10,
+                    377,
+                    701
+                ],
+                "template": [
+                    "stages/八仙过海.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    846,
+                    298,
+                    60,
+                    68
+                ]
+            }
+        },
+        "next": [
+            "八仙过海_页面",
+            "[JumpBack]进入八仙过海_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -76,
+                "y": 285
+            }
+        }
+    },
+    "进入八仙过海_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    667,
+                    10,
+                    377,
+                    701
+                ],
+                "template": [
+                    "stages/八仙过海.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    846,
+                    298,
+                    60,
+                    68
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 255,
+                "y": 588
+            }
+        }
+    }
+}

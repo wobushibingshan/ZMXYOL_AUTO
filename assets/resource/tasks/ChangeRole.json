@@ -1,0 +1,14 @@
+{
+    "task": [
+        {
+            "name": "切换角色",
+            "label": "切换角色",
+            "entry": "确认在村庄",
+            "group": [
+                "standalone"
+            ],
+            "default_check": false,
+            "description": "从村庄打开菜单切换到下一个角色。多号日常时，可在一套日常结束后手动勾选本任务再跑下一轮。"
+        }
+    ]
+}

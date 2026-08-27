@@ -1,0 +1,10 @@
+{
+  "name": "zmxyol-auto",
+  "private": true,
+  "description": "造梦西游 OL 每日自动化",
+  "devDependencies": {
+    "@nekosu/maa-tools": "1.0.23",
+    "@types/node": "^25.5.2",
+    "prettier-plugin-multiline-arrays": "^3.0.6"
+  }
+}

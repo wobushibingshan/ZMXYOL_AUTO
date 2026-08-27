@@ -1,0 +1,91 @@
+{
+    "$__mpe_config_新建Pipeline4": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\stages\\test1.json",
+            "lastSyncTime": 1780815996900,
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -148,
+                "y": -1,
+                "zoom": 0.86
+            },
+            "filename": "新建Pipeline4",
+            "version": "v1.6.1"
+        }
+    },
+    "$__mpe_external_新建节点1_副本12_新建Pipeline4": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1084,
+                "y": 284
+            }
+        }
+    },
+    "新建节点3": {
+        "next": [
+            "新建节点1_副本9"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 357,
+                "y": 498
+            }
+        }
+    },
+    "新建节点1_副本9": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "造梦西游OL"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]新建节点1_副本12",
+            "新建节点1_副本10"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 730,
+                "y": 508
+            }
+        }
+    },
+    "新建节点1_副本10": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "造梦西游OL"
+                ]
+            }
+        },
+        "next": [
+            "新建节点1_副本11"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1045,
+                "y": 517
+            }
+        }
+    },
+    "新建节点1_副本11": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "造梦西游OL"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1318,
+                "y": 538
+            }
+        }
+    }
+}

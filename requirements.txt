@@ -1,0 +1,6 @@
+maafw==v5.10.4
+loguru
+pillow
+pytz
+requests
+win32-setctime; sys_platform == "win32"

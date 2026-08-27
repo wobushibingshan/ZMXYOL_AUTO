@@ -1,0 +1,755 @@
+{
+    "$__mpe_config_新建Pipeline2": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1781885335388,
+            "isModifiedExternally": false,
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\stages\\龙宫.json",
+            "savedViewport": {
+                "x": 338,
+                "y": -271,
+                "zoom": 0.57
+            },
+            "filename": "新建Pipeline2",
+            "version": "v1.6.1"
+        }
+    },
+    "$__mpe_external_关卡扫荡_加载页面2_新建Pipeline2": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2251,
+                "y": 1651
+            }
+        }
+    },
+    "$__mpe_external_关卡扫荡_回家_新建Pipeline2": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2498,
+                "y": 834
+            }
+        }
+    },
+    "进入龙宫": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    202,
+                    5,
+                    333,
+                    695
+                ],
+                "template": [
+                    "stages/龙宫.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    345,
+                    403,
+                    32,
+                    30
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "龙宫_龙宫终",
+            "[JumpBack]进入龙宫_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -373,
+                "y": 599
+            }
+        }
+    },
+    "进入龙宫_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    202,
+                    5,
+                    333,
+                    695
+                ],
+                "template": [
+                    "stages/龙宫.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    345,
+                    403,
+                    32,
+                    30
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -71,
+                "y": 971
+            }
+        }
+    },
+    "龙宫_关闭关卡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1176,
+                    6,
+                    102,
+                    88
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]龙宫_关闭关卡_校验",
+            "龙宫_回家"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1738,
+                "y": 730
+            }
+        }
+    },
+    "龙宫_关闭关卡_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1176,
+                    6,
+                    102,
+                    88
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1992,
+                "y": 1114
+            }
+        }
+    },
+    "龙宫_关闭碾压完成": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1009,
+                    133,
+                    150,
+                    129
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]龙宫_关闭碾压完成_校验",
+            "龙宫_关闭关卡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1315,
+                "y": 766
+            }
+        }
+    },
+    "龙宫_关闭碾压完成_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1009,
+                    133,
+                    150,
+                    129
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1585,
+                "y": 1107
+            }
+        }
+    },
+    "龙宫_加": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    807,
+                    387,
+                    124,
+                    117
+                ],
+                "template": [
+                    "Dragon_Palace/加.png"
+                ]
+            }
+        },
+        "next": [
+            "龙宫_次数条"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 926,
+                "y": 520
+            }
+        }
+    },
+    "龙宫_加载页面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    261,
+                    5,
+                    755,
+                    547
+                ],
+                "template": [
+                    "public/加载页面.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "龙宫_菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 576,
+                "y": 1398
+            }
+        }
+    },
+    "龙宫_回家": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    7,
+                    585,
+                    125,
+                    133
+                ],
+                "template": [
+                    "public/回家.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "关卡扫荡_回家"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2146,
+                "y": 753
+            }
+        }
+    },
+    "龙宫_开始挑战": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    231,
+                    488,
+                    1045,
+                    230
+                ],
+                "template": [
+                    "Stage_Sweep/开始挑战.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "龙宫_次数条",
+            "[JumpBack]龙宫_开始挑战_校验",
+            "龙宫_加载页面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 229,
+                "y": 606
+            }
+        }
+    },
+    "龙宫_开始挑战_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    251,
+                    481,
+                    1012,
+                    236
+                ],
+                "template": [
+                    "Stage_Sweep/开始挑战.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 565,
+                "y": 1031
+            }
+        }
+    },
+    "龙宫_扫荡开始": {
+        "next": [
+            "进入龙宫"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -664,
+                "y": 662
+            }
+        }
+    },
+    "龙宫_次数条": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    373,
+                    284,
+                    604,
+                    283
+                ],
+                "template": [
+                    "Stage_Sweep/次数条-滑头.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "pre_wait_freezes": 200,
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin_offset": [
+                    17,
+                    14,
+                    -36,
+                    -34
+                ],
+                "end": [
+                    [
+                        1117,
+                        437,
+                        66,
+                        21
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "龙宫_加",
+            "龙宫_碾压确定"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 569,
+                "y": 607
+            }
+        }
+    },
+    "龙宫_碾压确定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    359,
+                    351,
+                    554,
+                    283
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "龙宫_关闭碾压完成",
+            "[JumpBack]龙宫_碾压确定_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 930,
+                "y": 916
+            }
+        }
+    },
+    "龙宫_碾压确定_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    359,
+                    351,
+                    554,
+                    283
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1232,
+                "y": 1142
+            }
+        }
+    },
+    "龙宫_菜单": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1127,
+                    2,
+                    152,
+                    141
+                ],
+                "template": [
+                    "public/菜单.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1186,
+                    52,
+                    35,
+                    36
+                ]
+            }
+        },
+        "next": [
+            "龙宫_菜单_设置"
+        ],
+        "on_error": [
+            "龙宫_菜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 885,
+                "y": 1432
+            }
+        }
+    },
+    "龙宫_菜单_设置": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    937,
+                    2,
+                    343,
+                    132
+                ],
+                "template": [
+                    "public/设置.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1087,
+                    59,
+                    21,
+                    22
+                ]
+            }
+        },
+        "next": [
+            "龙宫_返回村庄",
+            "[JumpBack]龙宫_菜单_设置_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1189,
+                "y": 1454
+            }
+        }
+    },
+    "龙宫_菜单_设置_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    937,
+                    2,
+                    343,
+                    132
+                ],
+                "template": [
+                    "public/设置.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1087,
+                    59,
+                    21,
+                    22
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1413,
+                "y": 1843
+            }
+        }
+    },
+    "龙宫_返回村庄": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    627,
+                    512,
+                    179,
+                    157
+                ],
+                "template": [
+                    "public/设置-村庄.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    684,
+                    568,
+                    41,
+                    36
+                ]
+            }
+        },
+        "next": [
+            "龙宫_返回村庄_确定",
+            "[JumpBack]龙宫_返回村庄_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1506,
+                "y": 1494
+            }
+        }
+    },
+    "龙宫_返回村庄_校验": {
+        "max_hit": 3,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    627,
+                    512,
+                    179,
+                    157
+                ],
+                "template": [
+                    "public/设置-村庄.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    684,
+                    568,
+                    41,
+                    36
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1839,
+                "y": 1856
+            }
+        }
+    },
+    "龙宫_返回村庄_确定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    472,
+                    338,
+                    341,
+                    154
+                ],
+                "template": [
+                    "Dragon_Palace/返回村庄_确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    540,
+                    384,
+                    193,
+                    59
+                ]
+            }
+        },
+        "next": [
+            "关卡扫荡_加载页面2",
+            "[JumpBack]龙宫_返回村庄_确定_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1866,
+                "y": 1517
+            }
+        }
+    },
+    "龙宫_返回村庄_确定_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    472,
+                    338,
+                    341,
+                    154
+                ],
+                "template": [
+                    "Dragon_Palace/返回村庄_确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    540,
+                    384,
+                    193,
+                    59
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2219,
+                "y": 1808
+            }
+        }
+    },
+    "龙宫_龙宫终": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    163,
+                    233,
+                    945,
+                    393
+                ],
+                "template": [
+                    "Dragon_Palace/文字_龙宫终.png"
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "龙宫_开始挑战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -40,
+                "y": 611
+            }
+        }
+    }
+}

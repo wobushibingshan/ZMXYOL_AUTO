@@ -1,0 +1,62 @@
+{
+    "interface_version": 2,
+    "name": "ZMXYOL_AUTO",
+    "label": "造梦西游OL每日自动化",
+    "description": "基于 MaaFramework 的造梦西游 OL 每日自动化。可一键启动游戏、完成日常并关闭客户端。",
+    "contact": "https://github.com/wobushibingshan/ZMXYOL_AUTO",
+    "license": "MIT",
+    "welcome": "欢迎使用 ZMXYOL_AUTO。推荐先选择预设「一键日常」；若已在村庄界面，请选择「游戏内日常」。请确认模拟器短边为 720，并在「游戏渠道」中选择与安装包一致的渠道。",
+    "version": "1.0.0",
+    "controller": [
+        {
+            "name": "安卓端",
+            "icon": "./resource/base/image/favicon.png",
+            "type": "Adb",
+            "display_short_side": 720
+        }
+    ],
+    "resource": [
+        {
+            "name": "官服",
+            "path": [
+                "./resource/base"
+            ]
+        }
+    ],
+    "agent": {
+        "child_exec": "python",
+        "child_args": [
+            "-u",
+            "./../agent/main.py"
+        ]
+    },
+    "group": [
+        {
+            "name": "daily",
+            "label": "日常任务"
+        },
+        {
+            "name": "lifecycle",
+            "label": "启停游戏"
+        },
+        {
+            "name": "standalone",
+            "label": "独立任务"
+        }
+    ],
+    "option": {},
+    "global_option": [
+        "游戏渠道"
+    ],
+    "import": [
+        "resource/tasks/preset/Daily.json",
+        "resource/tasks/GameLifecycle.json",
+        "resource/tasks/Construction.json",
+        "resource/tasks/AnnouncementTasks.json",
+        "resource/tasks/FrostRuins.json",
+        "resource/tasks/Oneclicksweep.json",
+        "resource/tasks/StageSweep.json",
+        "resource/tasks/DharmaCharacteristic.json",
+        "resource/tasks/ChangeRole.json"
+    ]
+}

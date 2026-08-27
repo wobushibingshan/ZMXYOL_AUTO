@@ -1,0 +1,940 @@
+{
+    "$__mpe_config_新建Pipeline3": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1781885030802,
+            "isModifiedExternally": false,
+            "filePath": "E:\\MAA-ZMXY\\MAA-zmxy\\assets\\resource\\base\\pipeline\\一键扫荡.json",
+            "savedViewport": {
+                "x": -342,
+                "y": -30,
+                "zoom": 0.75
+            },
+            "filename": "新建Pipeline3",
+            "version": "v1.6.1"
+        }
+    },
+    "一键扫荡_加载页面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    261,
+                    5,
+                    755,
+                    547
+                ],
+                "template": [
+                    "public/加载页面.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "一键扫荡任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3701,
+                "y": 759
+            }
+        }
+    },
+    "一键扫荡任务结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4071,
+                "y": 922
+            }
+        }
+    },
+    "一键碾压": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    223,
+                    166,
+                    193
+                ],
+                "template": [
+                    "One-click_domination/一键碾压.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    37,
+                    284,
+                    57,
+                    59
+                ]
+            }
+        },
+        "post_wait_freezes": 500,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：一键碾压.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到一键碾压，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "[JumpBack]一键碾压_校验",
+            "全选"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 890,
+                "y": 422
+            }
+        }
+    },
+    "一键碾压_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    7,
+                    219,
+                    298,
+                    490
+                ],
+                "template": [
+                    "One-click_domination/云游.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -108,
+                    -193,
+                    -49,
+                    -62
+                ]
+            }
+        },
+        "timeout": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1288,
+                "y": 626
+            }
+        }
+    },
+    "一键碾压任务开始前的等待": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1063,
+                    531,
+                    214,
+                    186
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "post_wait_freezes": 3000,
+        "next": [
+            "打开地图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -716,
+                "y": -11
+            }
+        }
+    },
+    "全选": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    171,
+                    144,
+                    69,
+                    60
+                ],
+                "template": [
+                    "One-click_domination/碾压-空格子.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    191,
+                    164,
+                    26,
+                    22
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前检查是否全选",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "已经全选，准备点击一键碾压",
+                "display": "log"
+            }
+        },
+        "next": [
+            "[JumpBack]全选_校验",
+            "检查一键碾压消耗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1302,
+                "y": 192
+            }
+        }
+    },
+    "全选_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    171,
+                    144,
+                    69,
+                    60
+                ],
+                "template": [
+                    "One-click_domination/碾压-空格子.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    191,
+                    164,
+                    26,
+                    22
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前检查是否全选",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "已经全选，准备点击一键碾压",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1694,
+                "y": 600
+            }
+        }
+    },
+    "关闭碾压": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1119,
+                    54,
+                    74,
+                    83
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1136,
+                    69,
+                    40,
+                    40
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：普通叉.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到普通叉，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "[JumpBack]关闭碾压_校验",
+            "回家"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2978,
+                "y": 644
+            }
+        }
+    },
+    "关闭碾压_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1119,
+                    54,
+                    74,
+                    83
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1136,
+                    69,
+                    40,
+                    40
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：普通叉.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到普通叉，准备点击",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3282,
+                "y": 1071
+            }
+        }
+    },
+    "回家": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    4,
+                    579,
+                    145,
+                    140
+                ],
+                "template": [
+                    "public/回家.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    37,
+                    625,
+                    55,
+                    59
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]回家_校验",
+            "一键扫荡_加载页面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3343,
+                "y": 656
+            }
+        }
+    },
+    "回家_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    4,
+                    579,
+                    145,
+                    140
+                ],
+                "template": [
+                    "public/回家.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    37,
+                    625,
+                    55,
+                    59
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3707,
+                "y": 1088
+            }
+        }
+    },
+    "打开地图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1129,
+                    591,
+                    147,
+                    128
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1176,
+                    625,
+                    50,
+                    57
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：世界地图.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到世界地图",
+                "display": "log"
+            }
+        },
+        "next": [
+            "点击天庭小地图",
+            "[JumpBack]打开地图_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -344,
+                "y": 1
+            }
+        }
+    },
+    "打开地图_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1129,
+                    591,
+                    147,
+                    128
+                ],
+                "template": [
+                    "public/世界地图.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1176,
+                    625,
+                    50,
+                    57
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -100,
+                "y": 475
+            }
+        }
+    },
+    "检查一键碾压消耗": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "识别一键碾压当前数量",
+                    "识别一键碾压消耗数量"
+                ],
+                "box_index": 1
+            }
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "CheckOneClickDominationCost",
+                "custom_action_param": {
+                    "cost_index": 1,
+                    "current_index": 0
+                }
+            }
+        },
+        "focus": {
+            "Node.Action.Succeeded": {
+                "content": "一键碾压消耗足够，准备点击碾压",
+                "display": "log"
+            },
+            "Node.Recognition.Starting": {
+                "content": "当前检查一键碾压消耗是否足够",
+                "display": "log"
+            }
+        },
+        "next": [
+            "碾压"
+        ],
+        "on_error": [
+            "关闭碾压"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1742,
+                "y": 167
+            }
+        }
+    },
+    "点击天庭小地图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    199,
+                    0,
+                    941,
+                    318
+                ],
+                "template": [
+                    "public/天庭小地图.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    553,
+                    106,
+                    48,
+                    43
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：天庭小地图.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到天庭小地图，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "绿色确定"
+        ],
+        "on_error": [
+            "[JumpBack]点击天庭小地图_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 23,
+                "y": 23
+            }
+        }
+    },
+    "点击天庭小地图_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    199,
+                    0,
+                    941,
+                    318
+                ],
+                "template": [
+                    "public/天庭小地图.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    553,
+                    106,
+                    48,
+                    43
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 317,
+                "y": 564
+            }
+        }
+    },
+    "碾压": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    864,
+                    529,
+                    226,
+                    102
+                ],
+                "template": [
+                    "One-click_domination/一键碾压按钮.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    903,
+                    556,
+                    135,
+                    43
+                ]
+            }
+        },
+        "post_wait_freezes": 1000,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：一键碾压按钮.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到一键碾压按钮，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "碾压完成",
+            "[JumpBack]碾压_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2023,
+                "y": 577
+            }
+        }
+    },
+    "碾压_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    864,
+                    529,
+                    226,
+                    102
+                ],
+                "template": [
+                    "One-click_domination/一键碾压按钮.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    903,
+                    556,
+                    135,
+                    43
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2310,
+                "y": 1063
+            }
+        }
+    },
+    "碾压完成": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    914,
+                    128,
+                    219,
+                    192
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1040,
+                    173,
+                    45,
+                    35
+                ]
+            }
+        },
+        "timeout": 5000,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "等待扫荡完成,准备关闭窗口",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "扫荡完成，关闭窗口？",
+                "display": "log"
+            }
+        },
+        "next": [
+            "[JumpBack]碾压完成_校验",
+            "关闭碾压"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2390,
+                "y": 598
+            }
+        }
+    },
+    "碾压完成_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    993,
+                    140,
+                    123,
+                    102
+                ],
+                "template": [
+                    "public/普通叉.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1040,
+                    173,
+                    45,
+                    35
+                ]
+            }
+        },
+        "timeout": 5000,
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "等待扫荡完成,准备关闭窗口",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "扫荡完成，关闭窗口？",
+                "display": "log"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2727,
+                "y": 972
+            }
+        }
+    },
+    "绿色确定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    615,
+                    315,
+                    281,
+                    199
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    687,
+                    384,
+                    88,
+                    55
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Starting": {
+                "content": "当前找图：绿色确定.png",
+                "display": "log"
+            },
+            "Node.Recognition.Succeeded": {
+                "content": "找到绿色确定，准备点击",
+                "display": "log"
+            }
+        },
+        "next": [
+            "[JumpBack]绿色确定_校验",
+            "一键碾压"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 403,
+                "y": 57
+            }
+        }
+    },
+    "绿色确定_校验": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    615,
+                    315,
+                    281,
+                    199
+                ],
+                "template": [
+                    "public/绿色确定.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    687,
+                    384,
+                    88,
+                    55
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 889,
+                "y": -315
+            }
+        }
+    },
+    "识别一键碾压当前数量": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    938,
+                    82,
+                    144,
+                    59
+                ],
+                "expected": ".+",
+                "only_rec": true
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1985,
+                "y": -136
+            }
+        }
+    },
+    "识别一键碾压消耗数量": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    829,
+                    558,
+                    57,
+                    44
+                ],
+                "expected": ".+",
+                "only_rec": true
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1711,
+                "y": -145
+            }
+        }
+    }
+}
